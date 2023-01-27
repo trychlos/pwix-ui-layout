@@ -7,121 +7,121 @@ import { Template } from 'meteor/templating';
 
 // class-name helper
 //  let the application insert a predefined class
-Template.registerHelper( 'plCordovaClass', function(){
-    return pwiLayout.Cordova() ? pwiLayout.conf.cordovaClass : '';
+Template.registerHelper( 'uiCordovaClass', function(){
+    return uiLayout.cordova() ? uiLayout.conf.cordovaClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plTouchableClass', function(){
-    return pwiLayout.Touchable() ? pwiLayout.conf.touchableClass : '';
+Template.registerHelper( 'uiTouchableClass', function(){
+    return uiLayout.touchable() ? uiLayout.conf.touchableClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plMobileClass', function(){
-    return pwiLayout.Mobile() ? pwiLayout.conf.mobileClass : '';
+Template.registerHelper( 'uiMobileClass', function(){
+    return uiLayout.mobile() ? uiLayout.conf.mobileClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plLandscapeClass', function(){
-    return pwiLayout.Landscape() ? pwiLayout.conf.landscapeClass : '';
+Template.registerHelper( 'uiLandscapeClass', function(){
+    return uiLayout.landscape() ? uiLayout.conf.landscapeClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plPortraitClass', function(){
-    return pwiLayout.Portrait() ? pwiLayout.conf.portraitClass : '';
+Template.registerHelper( 'uiPortraitClass', function(){
+    return uiLayout.Portrait() ? uiLayout.conf.portraitClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plHiddenIfCordova', function(){
-    return pwiLayout.Cordova() ? pwiLayout.conf.hiddenClass :'';
+Template.registerHelper( 'uiHiddenIfCordova', function(){
+    return uiLayout.cordova() ? uiLayout.conf.hiddenClass :'';
 });
 
 // class-name helper
-Template.registerHelper( 'plVisibleIfCordova', function(){
-    return pwiLayout.Cordova() ? pwiLayout.conf.visibleClass : '';
+Template.registerHelper( 'uiVisibleIfCordova', function(){
+    return uiLayout.cordova() ? uiLayout.conf.visibleClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plHiddenIfTouchable', function(){
-    return pwiLayout.Touchable() ? pwiLayout.conf.hiddenClass : '';
+Template.registerHelper( 'uiHiddenIfTouchable', function(){
+    return uiLayout.touchable() ? uiLayout.conf.hiddenClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plVisibleIfTouchable', function(){
-    return pwiLayout.Touchable() ? pwiLayout.conf.visibleClass : '';
+Template.registerHelper( 'uiVisibleIfTouchable', function(){
+    return uiLayout.touchable() ? uiLayout.conf.visibleClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plHiddenIfMobile', function(){
-    return pwiLayout.Mobile() ? pwiLayout.conf.hiddenClass : '';
+Template.registerHelper( 'uiHiddenIfMobile', function(){
+    return uiLayout.mobile() ? uiLayout.conf.hiddenClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plVisibleIfMobile', function(){
-    return pwiLayout.Mobile() ? pwiLayout.conf.visibleClass : '';
+Template.registerHelper( 'uiVisibleIfMobile', function(){
+    return uiLayout.mobile() ? uiLayout.conf.visibleClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plHiddenIfLandscape', function(){
-    return pwiLayout.Landscape() ? pwiLayout.conf.hiddenClass : '';
+Template.registerHelper( 'uiHiddenIfLandscape', function(){
+    return uiLayout.landscape() ? uiLayout.conf.hiddenClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plVisibleIfLandscape', function(){
-    return pwiLayout.Landscape() ? pwiLayout.conf.visibleClass : '';
+Template.registerHelper( 'uiVisibleIfLandscape', function(){
+    return uiLayout.landscape() ? uiLayout.conf.visibleClass : '';
 });
 
 // class-name helper
-Template.registerHelper( 'plHiddenIfPortrait', function(){
-    return pwiLayout.Landscape() ? '' : pwiLayout.conf.hiddenClass;
+Template.registerHelper( 'uiHiddenIfPortrait', function(){
+    return uiLayout.landscape() ? '' : uiLayout.conf.hiddenClass;
 });
 
 // class-name helper
-Template.registerHelper( 'plVisibleIfPortrait', function(){
-    return pwiLayout.Landscape() ? '' : pwiLayout.conf.visibleClass;
+Template.registerHelper( 'uiVisibleIfPortrait', function(){
+    return uiLayout.landscape() ? '' : uiLayout.conf.visibleClass;
 });
 
 // boolean helper
-Template.registerHelper( 'plCordova', function(){
-    return pwiLayout.Cordova();
+Template.registerHelper( 'uiCordova', function(){
+    return uiLayout.cordova();
 });
 
 // boolean helper
-Template.registerHelper( 'plTouchable', function(){
-    return pwiLayout.Touchable();
+Template.registerHelper( 'uiTouchable', function(){
+    return uiLayout.touchable();
 });
 
 // boolean helper
-Template.registerHelper( 'plMobile', function(){
-    return pwiLayout.Mobile();
+Template.registerHelper( 'uiMobile', function(){
+    return uiLayout.mobile();
 });
 
 // boolean helper
-Template.registerHelper( 'plLandscape', function(){
-    return pwiLayout.Landscape();
+Template.registerHelper( 'uiLandscape', function(){
+    return uiLayout.landscape();
 });
 
 // boolean helper
-Template.registerHelper( 'plPortrait', function(){
-    return !pwiLayout.Landscape();
+Template.registerHelper( 'uiPortrait', function(){
+    return !uiLayout.landscape();
 });
 
 // view helper
-Template.registerHelper( 'plView', function(){
-    return pwiLayout.View();
+Template.registerHelper( 'uiView', function(){
+    return uiLayout.view();
 });
 
 // view helper
-Template.registerHelper( 'plNView', function(){
-    return pwiLayout.View() === pwiLayout.VIEW_N;
+Template.registerHelper( 'uiNView', function(){
+    return uiLayout.view() === UI_VIEW_N;
 });
 
 // view helper
-Template.registerHelper( 'plMDView', function(){
-    return pwiLayout.View() === pwiLayout.VIEW_MD;
+Template.registerHelper( 'uiMDView', function(){
+    return uiLayout.view() === UI_VIEW_MD;
 });
 
 // view helper
-Template.registerHelper( 'plSMView', function(){
-    return pwiLayout.View() === pwiLayout.VIEW_SM;
+Template.registerHelper( 'uiSMView', function(){
+    return uiLayout.view() === UI_VIEW_SM;
 });

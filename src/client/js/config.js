@@ -1,7 +1,10 @@
 /*
  * pwix:layout/src/client/js/config.js
  */
+
 import { ReactiveDict } from 'meteor/reactive-dict';
+import { Tracker } from 'meteor/tracker';
+
 import detectIt from 'detect-it';
 
 /*
@@ -28,14 +31,14 @@ import detectIt from 'detect-it';
 //  returns the (get/set) value
 const _runningDict = function( name, value ){
     if( value ){
-        pwiLayout.runningUI.set( name, value );
+        uiLayout.runningUI.set( name, value );
         return value;
     }
-    return pwiLayout.runningUI.get( name );
+    return uiLayout.runningUI.get( name );
 };
 
-pwiLayout = {
-    ...pwiLayout,
+uiLayout = {
+    ...uiLayout,
     ...{
         // the result of the detectIt module
         //  https://www.npmjs.com/package/detect-it
@@ -45,41 +48,43 @@ pwiLayout = {
 
         resizeListener(){
             console.log( 'pwix:layout resizing' );
-            pwiLayout.Resize( new Date());
-            pwiLayout.Height( window.innerHeight );
-            pwiLayout.Width( window.innerWidth );
-            pwiLayout.Landscape( pwiLayout.Width() > pwiLayout.Height());
+            uiLayout.resize( new Date());
+            uiLayout.height( window.innerHeight );
+            uiLayout.width( window.innerWidth );
+            uiLayout.landscape( uiLayout.width() > uiLayout.height());
         },
 
         // reactive getters / setters
-        uiHeight( height ){ return _runningDict( 'height', height ); },
-        uiLandscape( landscape ){ return _runningDict( 'landscape', landscape ); },
-        uiCordova( mobile ){ return _runningDict( 'mobile', mobile ); },
-        uiResize( stamp ){ return _runningDict( 'resize', stamp ); },
-        uiTouchable( touchable ){ return _runningDict( 'touchable', touchable ); },
-        uiWidth( width ){ return _runningDict( 'width', width ); },
-
-        // the size of the breakpoints as defined in /src/client/css/ui_layout.less
-        SM_WIDTH: 480,
-        MD_WIDTH: 768,
-
-        // some string constants
-        VIEW_N: 'VIEW_N',
-        VIEW_MD: 'VIEW_MD',
-        VIEW_SM: 'VIEW_SM',
-        uiView(){
-            const w = pwiLayout.Width();
-            if( w >= pwiLayout.MD_WIDTH ){
-                return pwiLayout.VIEW_N;
+        cordova( mobile ){ return _runningDict( 'mobile', mobile ); },
+        height( height ){ return _runningDict( 'height', height ); },
+        landscape( landscape ){ return _runningDict( 'landscape', landscape ); },
+        mobile( mobile ){ return _runningDict( 'mobile', mobile ); },
+        resize( stamp ){ return _runningDict( 'resize', stamp ); },
+        touchable( touchable ){ return _runningDict( 'touchable', touchable ); },
+        width( width ){ return _runningDict( 'width', width ); },
+        view(){
+            const w = uiLayout.width();
+            if( w >= UI_MD_WIDTH ){
+                return UI_VIEW_N;
             }
-            if( w >= pwiLayout.SM_WIDTH ){
-                return pwiLayout.VIEW_MD;
+            if( w >= UI_SM_WIDTH ){
+                return UI_VIEW_MD;
             }
-            return pwiLayout.VIEW_SM;
+            return UI_VIEW_SM;
         }
     }
 }
 
-pwiLayout.resizeListener();
-pwiLayout.Cordova( Meteor.isCordova );
-pwiLayout.Touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
+uiLayout.resizeListener();
+uiLayout.cordova( Meteor.isCordova );
+uiLayout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
+
+Tracker.autorun(() => {
+    let mobile = uiLayout.cordova();
+    const min = uiLayout.height();
+    const width = uiLayout.width();
+    if( width < min ){
+        min = width;
+    }
+    uiLayout.mobile( mobile || min < UI_SM_WIDTH );
+});

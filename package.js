@@ -9,7 +9,12 @@ Package.describe({
 Package.onUse( function( api ){
     configure( api );
     api.export([
-        'pwiLayout'
+        'uiLayout',
+        'UI_SM_WIDTH',
+        'UI_MD_WIDTH',
+        'UI_VIEW_N',
+        'UI_VIEW_MD',
+        'UI_VIEW_SM',
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.addFiles( 'src/client/css/ui_layout.less', 'client', { isImport: true });

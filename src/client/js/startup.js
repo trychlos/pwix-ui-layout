@@ -3,11 +3,11 @@
  */
 
 Meteor.startup(() => {
-    console.log( 'pwix:layout/src/client/js/startup.js Meteor.startup() pwiLayout=', pwiLayout );
+    console.log( 'pwix:layout/src/client/js/startup.js uiLayout=', uiLayout );
 });
 
 Meteor.startup(() => {
     window.addEventListener( 'resize', () => {
-        pwiLayout.resizeListener();
+        uiLayout.resizeListener();
     });
 });

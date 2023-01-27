@@ -32,7 +32,7 @@ all possible cases of running devices.
 
 ## Configuration
 
-The package may be configured by calling at initialization time the `pwiLayout.configure()`
+The package may be configured by calling at initialization time the `uiLayout.configure()`
 function with an object containing the keys to be be configured.
 
 Note that this object
@@ -94,8 +94,8 @@ Defaut value is ''.
 
 The package defines two breakpoints, and two corresponding less constants:
 
-- @sm-width: 480px;
-- @md-width: 768px;
+- @ui-sm-width: 480px
+- @ui-md-width: 768px
 
 These constants are thought to be used in media queries, and can be imported in an
 application less file as:
@@ -108,33 +108,33 @@ application less file as:
 
 ### A global object
 
-- `pwiLayout`
+- `uiLayout`
 
 ### The detectIt result
 
-- `pwiLayout.detectIt{ ... }`
+- `uiLayout.detectIt{ ... }`
 
 The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 ### Methods
 
-- `pwiLayout.Height()`
+- `uiLayout.height()`
 
      The current document's viewport height
 
-- `pwiLayout.Width()`
+- `uiLayout.width()`
 
      The browser viewport width
 
-- `pwiLayout.Cordova()`
+- `uiLayout.cordova()`
 
      Whether we are running a mobile (Cordova) application
 
-- `pwiLayout.Touchable()`
+- `uiLayout.touchable()`
 
      Whether a touchable device is the primary input way (i.e. no keyboard nor mouse)
 
-- `pwiLayout.Mobile()`
+- `uiLayout.mobile()`
 
      Whether we are running on a mobile device
 
@@ -142,39 +142,39 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
      is only a hint, as we do not have any objective way to detect this type of environment.
      For now, we are tracking a touchable device with a small resolution, or a Cordova environment.
 
-- `pwiLayout.Landscape()`
+- `uiLayout.landscape()`
 
      Whether we are using a landscape layout
 
-- `pwiLayout.Resize()`
+- `uiLayout.resize()`
 
      The last resize event timestamp
 
-- `pwiLayout.View()`
+- `uiLayout.view()`
 
-     Returns a VIEW_N/MD/SM constant regarding the current size of the viewport
+     Returns a UI_VIEW_N/MD/SM constant regarding the current size of the viewport
 
 ### Constants
 
 - UI_SM_WIDTH
 
-     an integer constant with @sm-width value
+     an integer constant with @ui-sm-width value
 
 - UI_MD_WIDTH
 
-     an integer constant with @md-width value
+     an integer constant with @ui-md-width value
 
 - UI_VIEW_N
 
-     A constant for a normal-size view, which may be tested againt the result of `pwiLayout.View()`
+     A constant for a normal-size view, which may be tested againt the result of `uiLayout.view()`
 
 - UI_VIEW_MD
 
-     A constant for a medium-size view, which may be tested againt the result of `pwiLayout.View()`
+     A constant for a medium-size view, which may be tested againt the result of `uiLayout.view()`
 
 - UI_VIEW_SM
 
-     A constant for a small-size view, which may be tested againt the result of `pwiLayout.View()`
+     A constant for a small-size view, which may be tested againt the result of `uiLayout.view()`
 
 ### Blaze helpers
 
@@ -182,48 +182,48 @@ The package defines some globally available Blaze helpers:
 
 - Class-name helpers: return the configured class
 
-     - plCordovaClass
-     - plTouchableClass
-     - plMobileClass
-     - plLandscapeClass
-     - plPortraitClass
+     - uiCordovaClass
+     - uiTouchableClass
+     - uiMobileClass
+     - uiLandscapeClass
+     - uiPortraitClass
 
 - Class-name helpers: return the 'hidden' or 'visible' class as configured
 
-     - plHiddenIfCordova
-     - plVisibleIfCordova
-     - plHiddenIfTouchable
-     - plVisibleIfTouchable
-     - plHiddenIfMobile
-     - plVisibleIfMobile
-     - plHiddenIfLandscape
-     - plVisibleIfLandscape
-     - plHiddenIfPortrait
-     - plVisibleIfPortrait
+     - uiHiddenIfCordova
+     - uiVisibleIfCordova
+     - uiHiddenIfTouchable
+     - uiVisibleIfTouchable
+     - uiHiddenIfMobile
+     - uiVisibleIfMobile
+     - uiHiddenIfLandscape
+     - uiVisibleIfLandscape
+     - uiHiddenIfPortrait
+     - uiVisibleIfPortrait
 
 - Boolean helpers
 
-     - plCordova
-     - plTouchable
-     - plMobile
-     - plLandscape
-     - plPortrait
+     - uiCordova
+     - uiTouchable
+     - uiMobile
+     - uiLandscape
+     - uiPortrait
 
 - Sizing helpers
 
-     - plView
+     - uiView
 
           returns the current view size as a string constant
 
-     - plNView
+     - uiNView
 
           test for a normal-size view
 
-     - plMDView
+     - uiMDView
 
           test for a medium-size view
 
-     - plSMView
+     - uiSMView
 
           test for a small-size view
 

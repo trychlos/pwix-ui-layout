@@ -2,9 +2,9 @@
  * pwix:layout/src/common/js/config.js
  */
 
-console.log( 'pwix:layout/src/common/js/config.js declaring global exported pwiLayout object' );
+console.log( 'pwix:layout/src/common/js/config.js declaring global exported uiLayout object' );
 
-pwiLayout = {
+uiLayout = {
     // client-specific data and functions
     client: {},
 
@@ -21,7 +21,7 @@ pwiLayout = {
     // should be *in same terms* called both by the client and the server
     configure: function( o ){
         console.log( 'pwix:layout configure() with', o );
-        pwiLayout.conf = { ...pwiLayout.conf, ...o };
+        uiLayout.conf = { ...uiLayout.conf, ...o };
     },
 
     // server-specific data and functions
