@@ -2,7 +2,7 @@
  * pwix:layout/src/common/js/config.js
  */
 
-console.log( 'pwix:layout/src/common/js/config.js declaring global exported uiLayout object' );
+//console.log( 'pwix:layout/src/common/js/config.js defining globally exported uiLayout object' );
 
 uiLayout = {
     // client-specific data and functions
