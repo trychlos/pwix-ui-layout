@@ -30,7 +30,7 @@ Package.onTest( function( api ){
 function configure( api ){
     api.versionsFrom( '2.9.1' );
     api.use( 'ecmascript', 'client' );
-    api.use( 'less', 'client' );
+    api.use( 'less@4.0.0', 'client' );
     api.use( 'tracker', 'client' );
     api.use( 'reactive-dict', 'client' );
     api.use( 'reactive-var', 'client' );
