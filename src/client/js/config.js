@@ -30,7 +30,7 @@ import detectIt from 'detect-it';
 // a private function which acts as a getter/setter
 //  returns the (get/set) value
 const _runningDict = function( name, value ){
-    if( value ){
+    if( value !== undefined ){
         uiLayout.runningUI.set( name, value );
         return value;
     }
@@ -47,7 +47,7 @@ uiLayout = {
         runningUI: new ReactiveDict(),
 
         resizeListener(){
-            console.log( 'pwix:layout resizing' );
+            //console.log( 'pwix:layout resizing' );
             uiLayout.resize( new Date());
             uiLayout.height( window.innerHeight );
             uiLayout.width( window.innerWidth );
@@ -55,7 +55,7 @@ uiLayout = {
         },
 
         // reactive getters / setters
-        cordova( mobile ){ return _runningDict( 'mobile', mobile ); },
+        cordova( cordova ){ return _runningDict( 'cordova', cordova ); },
         height( height ){ return _runningDict( 'height', height ); },
         landscape( landscape ){ return _runningDict( 'landscape', landscape ); },
         mobile( mobile ){ return _runningDict( 'mobile', mobile ); },
@@ -80,11 +80,6 @@ uiLayout.cordova( Meteor.isCordova );
 uiLayout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
 
 Tracker.autorun(() => {
-    let mobile = uiLayout.cordova();
-    const min = uiLayout.height();
-    const width = uiLayout.width();
-    if( width < min ){
-        min = width;
-    }
-    uiLayout.mobile( mobile || min < UI_SM_WIDTH );
+    const min = uiLayout.landscape() ? uiLayout.height() : uiLayout.width();
+    uiLayout.mobile( uiLayout.cordova() || min <= UI_SM_WIDTH );
 });

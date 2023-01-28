@@ -120,11 +120,13 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 - `uiLayout.height()`
 
-     The current document's viewport height
+     The current document's viewport height<br />
+     A reactive data source
 
 - `uiLayout.width()`
 
-     The browser viewport width
+     The browser viewport width<br />
+     A reactive data source
 
 - `uiLayout.cordova()`
 
@@ -144,15 +146,18 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 - `uiLayout.landscape()`
 
-     Whether we are using a landscape layout
+     Whether we are using a landscape layout<br />
+     A reactive data source
 
 - `uiLayout.resize()`
 
-     The last resize event timestamp
+     The last resize event timestamp<br />
+     A reactive data source
 
 - `uiLayout.view()`
 
-     Returns a UI_VIEW_N/MD/SM constant regarding the current size of the viewport
+     Returns a UI_VIEW_N/MD/SM constant regarding the current size of the viewport<br />
+     A reactive data source
 
 ### Constants
 

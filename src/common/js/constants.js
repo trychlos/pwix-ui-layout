@@ -6,6 +6,7 @@
 UI_SM_WIDTH = 480;
 UI_MD_WIDTH = 768;
 
+// the view model
 UI_VIEW_N = 'UI_VIEW_N';
 UI_VIEW_MD = 'UI_VIEW_MD';
 UI_VIEW_SM = 'UI_VIEW_SM';
