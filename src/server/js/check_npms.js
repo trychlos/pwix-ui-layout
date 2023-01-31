@@ -4,6 +4,10 @@
 
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
 
+if( false ){
+    require( 'detect-it/package.json' );    // whitelisting required
+}
+
 checkNpmVersions({
     'detect-it': '^4.0.1'
 }, 'pwix:layout' );

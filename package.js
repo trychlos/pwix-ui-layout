@@ -29,7 +29,7 @@ Package.onTest( function( api ){
 });
 
 function configure( api ){
-    api.versionsFrom( '2.9.1' );
+    api.versionsFrom( '2.9.0' );
     api.use( 'ecmascript' );
     api.use( 'less@4.0.0', 'client' );
     api.use( 'tracker', 'client' );
