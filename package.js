@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:layout',
-    version: '1.0.1',
+    version: '1.1.0',
     summary: 'Client-only Meteor package for layout management',
     git: 'https://github.com/trychlos/pwix:layout',
     documentation: 'README.md'
@@ -17,6 +17,7 @@ Package.onUse( function( api ){
         'UI_VIEW_SM',
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
+    api.mainModule( 'src/server/js/index.js', 'server' );
     api.addFiles( 'src/client/css/ui_layout.less', 'client', { isImport: true });
 });
 
@@ -29,13 +30,13 @@ Package.onTest( function( api ){
 
 function configure( api ){
     api.versionsFrom( '2.9.1' );
-    api.use( 'ecmascript', 'client' );
+    api.use( 'ecmascript' );
     api.use( 'less@4.0.0', 'client' );
     api.use( 'tracker', 'client' );
     api.use( 'reactive-dict', 'client' );
     api.use( 'reactive-var', 'client' );
+    api.use( 'tmeasday:check-npm-versions@1.0.2', 'server' );
 }
 
-Npm.depends({
-    'detect-it': '4.0.1'
-});
+// NPM dependencies are checked in /src/server/js/check_npms.js
+// See also https://guide.meteor.com/writing-atmosphere-packages.html#npm-dependencies
