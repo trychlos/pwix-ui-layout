@@ -92,17 +92,16 @@ Defaut value is ''.
 
 ## Breakpoints
 
-The package defines two breakpoints, and two corresponding less constants:
+The package defines two breakpoints, and two corresponding `less` constants:
 
 - @ui-sm-width: 480px
 - @ui-md-width: 768px
 
 These constants are thought to be used in media queries, and can be imported in an
-application less file as:
-
-<code>
-@import "{pwix:layout}/src/client/css/ui_layout.less";
-</code>
+application `less` file as:
+```
+    @import "{pwix:layout}/src/client/css/ui_layout.less";
+```
 
 ## Provides
 

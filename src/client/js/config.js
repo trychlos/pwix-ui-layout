@@ -27,14 +27,16 @@ import detectIt from 'detect-it';
                                 // toolbars, etc., includes padding and border but not margin)
  */
 
+_runningUI = new ReactiveDict();
+
 // a private function which acts as a getter/setter
 //  returns the (get/set) value
 const _runningDict = function( name, value ){
     if( value !== undefined ){
-        uiLayout.runningUI.set( name, value );
+        _runningUI.set( name, value );
         return value;
     }
-    return uiLayout.runningUI.get( name );
+    return _runningUI.get( name );
 };
 
 uiLayout = {
@@ -44,13 +46,15 @@ uiLayout = {
         //  https://www.npmjs.com/package/detect-it
         detectIt: detectIt,
 
-        runningUI: new ReactiveDict(),
-
         resizeListener(){
             //console.log( 'pwix:layout resizing' );
             uiLayout.resize( new Date());
-            uiLayout.height( window.innerHeight );
-            uiLayout.width( window.innerWidth );
+            //uiLayout.height( window.innerHeight );
+            //uiLayout.width( window.innerWidth );
+            //uiLayout.height( window.screen.availHeight );
+            //uiLayout.width( window.screen.availWidth );
+            uiLayout.height( document.documentElement.clientHeight );
+            uiLayout.width( document.documentElement.clientWidth );
             uiLayout.landscape( uiLayout.width() > uiLayout.height());
         },
 
@@ -64,6 +68,8 @@ uiLayout = {
         width( width ){ return _runningDict( 'width', width ); },
         view(){
             const w = uiLayout.width();
+            //console.log( 'w='+w );
+            //console.log( window );
             if( w >= UI_MD_WIDTH ){
                 return UI_VIEW_N;
             }
