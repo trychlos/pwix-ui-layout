@@ -5,5 +5,5 @@
 import { checkNpmVersions } from 'meteor/tmeasday:check-npm-versions';
 
 checkNpmVersions({
-    'detect-it': '^5.0.1'
+    'detect-it': '^4.0.1'
 }, 'pwix:layout' );
