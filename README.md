@@ -1,4 +1,4 @@
-# pwix:layout
+# pwix:layout - README
 
 ## Rationale
 

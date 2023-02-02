@@ -1,6 +1,4 @@
-# pwix:layout
-
-## ChangeLog
+# pwix:layout - ChangeLog
 
 | Version | Release    | Content |
 | ---:    | :---       | :---    |
