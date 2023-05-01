@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:layout',
-    version: '1.1.2',
+    version: '1.1.3-rc',
     summary: 'Client-only Meteor package for responsive layout management',
     git: 'https://github.com/trychlos/pwix:layout',
     documentation: 'README.md'
