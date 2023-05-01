@@ -9,5 +9,6 @@ if( false ){
 }
 
 checkNpmVersions({
-    'detect-it': '^4.0.1'
+    'detect-it': '^4.0.1',
+    'merge': '^2.1.1'
 }, 'pwix:layout' );
