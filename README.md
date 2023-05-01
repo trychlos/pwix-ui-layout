@@ -1,4 +1,4 @@
-# pwix:layout - README
+# pwix:layout
 
 ## Rationale
 
@@ -32,63 +32,53 @@ all possible cases of running devices.
 
 ## Configuration
 
-The package may be configured by calling at initialization time the `uiLayout.configure()`
-function with an object containing the keys to be be configured.
+The package's behavior can be configured through a call to the `uiLayout.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
 
-Note that this object
-only needs to embeds keys the application wants explicitely configure, as the corresponding
-values will override the default ones.
+Known configuration options are:
 
-<table>
-<tr><td style="vertical-align:top;">
-<code>hiddenClass</code>
-</td><td style="vertical-align:top;">
-The class to be returned by the package helpers to hide a DOM element.<br />
-Defaut value is 'hidden'.
-</td></tr>
+- `hiddenClass`
 
-<tr><td style="vertical-align:top;">
-<code>visibleClass</code>
-</td><td style="vertical-align:top;">
-The class to be returned by the package helpers to show a DOM element.<br />
-Defaut value is 'visible'.
-</td></tr>
+    The class to be returned by the package helpers to hide a DOM element.
 
-<tr><td style="vertical-align:top;">
-<code>cordovaClass</code>
-</td><td style="vertical-align:top;">
-The class to be returned by the package helpers when running in a Cordova environment.<br />
-Defaut value is ''.
-</td></tr>
+     Defaut value is `hidden`.
 
-<tr><td style="vertical-align:top;">
-<code>touchableClass</code>
-</td><td style="vertical-align:top;">
-The class to be returned by the package helpers when running on a device whose primary input is a touchpad.<br />
-Defaut value is ''.
-</td></tr>
+- `visibleClass`
 
-<tr><td style="vertical-align:top;">
-<code>mobileClass</code>
-</td><td style="vertical-align:top;">
-The class to be returned by the package helpers when the environment seems to be a mobile.<br />
-Defaut value is ''.
-</td></tr>
+     The class to be returned by the package helpers to show a DOM element.
 
-<tr><td style="vertical-align:top;">
-<code>landscapeClass</code>
-</td><td style="vertical-align:top;">
-The class to be returned by the package helpers when running in landscape mode.<br />
-Defaut value is ''.
-</td></tr>
+     Defaut value is `visible`.
 
-<tr><td style="vertical-align:top;">
-<code>portraitClass</code>
-</td><td style="vertical-align:top;">
-The class to be returned by the package helpers when running in portrait mode.<br />
-Defaut value is ''.
-</td></tr>
-</table>
+- `cordovaClass`
+
+     The class to be returned by the package helpers when running in a Cordova environment.
+
+     Defaut value is empty.
+
+- `touchableClass`
+
+     The class to be returned by the package helpers when running on a device whose primary input is a touchpad.
+
+     Defaut value is empty.
+
+- `mobileClass`
+
+     The class to be returned by the package helpers when the environment seems to be a mobile.
+
+     Defaut value is empty.
+
+- `landscapeClass`
+
+     The class to be returned by the package helpers when running in landscape mode.
+
+     Defaut value is empty.
+
+- `portraitClass`
+
+     The class to be returned by the package helpers when running in portrait mode.
+
+     Defaut value is empty.
+
+Please note, as an explicit reminder for the fools, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `uiLayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
 
 ## Breakpoints
 
@@ -160,23 +150,23 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 ### Constants
 
-- UI_SM_WIDTH
+- `UI_SM_WIDTH`
 
      an integer constant with @ui-sm-width value
 
-- UI_MD_WIDTH
+- `UI_MD_WIDTH`
 
      an integer constant with @ui-md-width value
 
-- UI_VIEW_N
+- `UI_VIEW_N`
 
      A constant for a normal-size view, which may be tested againt the result of `uiLayout.view()`
 
-- UI_VIEW_MD
+- `UI_VIEW_MD`
 
      A constant for a medium-size view, which may be tested againt the result of `uiLayout.view()`
 
-- UI_VIEW_SM
+- `UI_VIEW_SM`
 
      A constant for a small-size view, which may be tested againt the result of `uiLayout.view()`
 
@@ -186,48 +176,48 @@ The package defines some globally available Blaze helpers:
 
 - Class-name helpers: return the configured class
 
-     - uiCordovaClass
-     - uiTouchableClass
-     - uiMobileClass
-     - uiLandscapeClass
-     - uiPortraitClass
+     - `uiCordovaClass`
+     - `uiTouchableClass`
+     - `uiMobileClass`
+     - `uiLandscapeClass`
+     - `uiPortraitClass`
 
 - Class-name helpers: return the 'hidden' or 'visible' class as configured
 
-     - uiHiddenIfCordova
-     - uiVisibleIfCordova
-     - uiHiddenIfTouchable
-     - uiVisibleIfTouchable
-     - uiHiddenIfMobile
-     - uiVisibleIfMobile
-     - uiHiddenIfLandscape
-     - uiVisibleIfLandscape
-     - uiHiddenIfPortrait
-     - uiVisibleIfPortrait
+     - `uiHiddenIfCordova`
+     - `uiVisibleIfCordova`
+     - `uiHiddenIfTouchable`
+     - `uiVisibleIfTouchable`
+     - `uiHiddenIfMobile`
+     - `uiVisibleIfMobile`
+     - `uiHiddenIfLandscape`
+     - `uiVisibleIfLandscape`
+     - `uiHiddenIfPortrait`
+     - `uiVisibleIfPortrait`
 
 - Boolean helpers
 
-     - uiCordova
-     - uiTouchable
-     - uiMobile
-     - uiLandscape
-     - uiPortrait
+     - `uiCordova`
+     - `uiTouchable`
+     - `uiMobile`
+     - `uiLandscape`
+     - `uiPortrait`
 
 - Sizing helpers
 
-     - uiView
+     - `uiView`
 
           returns the current view size as a string constant
 
-     - uiNView
+     - `uiNView`
 
           test for a normal-size view
 
-     - uiMDView
+     - `uiMDView`
 
           test for a medium-size view
 
-     - uiSMView
+     - `uiSMView`
 
           test for a small-size view
 
@@ -255,4 +245,4 @@ Each of these dependencies should be installed at application level:
 
 ---
 P. Wieser
-- Last updated on 2023, Jan. 31st
+- Last updated on 2023, May 1st
