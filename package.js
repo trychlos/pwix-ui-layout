@@ -12,9 +12,13 @@ Package.onUse( function( api ){
         'uiLayout',
         'UI_SM_WIDTH',
         'UI_MD_WIDTH',
-        'UI_VIEW_N',
-        'UI_VIEW_MD',
+        'UI_ST_WIDTH',
+        'UI_LG_WIDTH',
         'UI_VIEW_SM',
+        'UI_VIEW_MD',
+        'UI_VIEW_ST',
+        'UI_VIEW_LG',
+        'UI_VIEW_XL'
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.mainModule( 'src/server/js/index.js', 'server' );

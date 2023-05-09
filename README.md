@@ -20,7 +20,7 @@ So, we must deal with three runtime environments
      These two runtime environments are quite similar in that they are both
      restrictives in the amount of displayable informations.
 
-     Differences come only from the available display size which may range
+     Differences come mainly from the available display size which may range
      from very small (smartphone) to very large (high-res tv). They are for
      now resolved through CSS media queries. Some menu-driven layout changes
      may be planned later depending of identified use cases.
@@ -82,10 +82,14 @@ Please note, as an explicit reminder for the fools, that, because the Meteor pac
 
 ## Breakpoints
 
-The package defines two breakpoints, and two corresponding `less` constants:
+The package defines five breakpoints, and four corresponding `less` constants:
 
-- @ui-sm-width: 480px
-- @ui-md-width: 768px
+- small  `@ui-sm-width` at 400px
+- medium `@ui-md-width` at 768px
+- standard `@ui-st-width` at 1200px
+- large `@ui-lg-width` at 1520px
+
+all multiple of 16.
 
 These constants are thought to be used in media queries, and can be imported in an
 application `less` file as:
@@ -145,7 +149,7 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 - `uiLayout.view()`
 
-     Returns a UI_VIEW_N/MD/SM constant regarding the current size of the viewport<br />
+     Returns a UI_VIEW_LG/MD/SM/XL constant regarding the current size of the viewport<br />
      A reactive data source
 
 ### Constants
@@ -158,17 +162,43 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
      an integer constant with @ui-md-width value
 
-- `UI_VIEW_N`
+- `UI_ST_WIDTH`
 
-     A constant for a normal-size view, which may be tested againt the result of `uiLayout.view()`
+     an integer constant with @ui-st-width value
+
+- `UI_LG_WIDTH`
+
+     an integer constant with @ui-lg-width value
+
+- `UI_VIEW_SM`
+
+     A constant for a small-size view, which may be tested againt the result of `uiLayout.view()`
 
 - `UI_VIEW_MD`
 
      A constant for a medium-size view, which may be tested againt the result of `uiLayout.view()`
 
-- `UI_VIEW_SM`
+- `UI_VIEW_ST`
 
-     A constant for a small-size view, which may be tested againt the result of `uiLayout.view()`
+     A constant for a standard-size view, which may be tested againt the result of `uiLayout.view()`
+
+- `UI_VIEW_LG`
+
+     A constant for a large-size view, which may be tested againt the result of `uiLayout.view()`
+
+- `UI_VIEW_XL`
+
+     A constant for a extra large-size view, which may be tested againt the result of `uiLayout.view()`
+
+### References
+
+#### `uiLayout.iBreakpoints`
+
+The array of defined (integer values) breakpoints.
+
+#### `uiLayout.cBreakpoints`
+
+The array of defined (string constants) breakpoints.
 
 ### Blaze helpers
 
@@ -209,17 +239,25 @@ The package defines some globally available Blaze helpers:
 
           returns the current view size as a string constant
 
-     - `uiNView`
+     - `uiSMView`
 
-          test for a normal-size view
+          test for a small-size view
 
      - `uiMDView`
 
           test for a medium-size view
 
-     - `uiSMView`
+     - `uiSTView`
 
-          test for a small-size view
+          test for a medium-size view
+
+     - `uiLGView`
+
+          test for a large-size view
+
+     - `uiXLView`
+
+          test for a very large-size view
 
 ## Maintainer reminder - Test environments
 
@@ -236,7 +274,10 @@ Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](ht
 Instead we check npm versions of installed packages at runtime, on server startup, in development environment.
 
 Dependencies as of v 1.1.0:
-- printf, starting with v 4.0.
+```
+    'detect-it': '^4.0.1',
+    'merge': '^2.1.1'
+```
 
 Each of these dependencies should be installed at application level:
 ```

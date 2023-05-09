@@ -112,8 +112,8 @@ Template.registerHelper( 'uiView', function(){
 });
 
 // view helper
-Template.registerHelper( 'uiNView', function(){
-    return uiLayout.view() === UI_VIEW_N;
+Template.registerHelper( 'uiSMView', function(){
+    return uiLayout.view() === UI_VIEW_SM;
 });
 
 // view helper
@@ -122,6 +122,16 @@ Template.registerHelper( 'uiMDView', function(){
 });
 
 // view helper
-Template.registerHelper( 'uiSMView', function(){
-    return uiLayout.view() === UI_VIEW_SM;
+Template.registerHelper( 'uiSTView', function(){
+    return uiLayout.view() === UI_VIEW_ST;
+});
+
+// view helper
+Template.registerHelper( 'uiLGView', function(){
+    return uiLayout.view() === UI_VIEW_LG;
+});
+
+// view helper
+Template.registerHelper( 'uiXLView', function(){
+    return uiLayout.view() === UI_VIEW_XL;
 });

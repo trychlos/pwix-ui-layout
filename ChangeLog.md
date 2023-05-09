@@ -2,6 +2,10 @@
 
 | Version | Release    | Content |
 | ---:    | :---       | :---    |
+| 1.2.0   |  | Change sm breakpoint from 480 to 400 |
+|         |  | Introduce lg and xl breakpoints at 1200 and 1520 respectively |
+|         |  | Rename 'N' (normal) constant to 'ST' (standard) |
+|         |  | README: fix dependencies |
 | 1.1.2   | 2023- 5- 1 | Make sure successive calls to configure() override each other (do not add each other) |
 |         |            | Add merge dependency |
 | 1.1.1   | 2023- 1-31 | Fix missing updates |
