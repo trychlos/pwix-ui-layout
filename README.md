@@ -118,50 +118,72 @@ Please note, as an explicit reminder for the fools, that, because the Meteor pac
 
 - `uiLayout.detectIt{ ... }`
 
-The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
+The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it).
 
 ### Methods
 
-- `uiLayout.height()`
-
-     The current document's viewport height<br />
-     A reactive data source
-
-- `uiLayout.width()`
-
-     The browser viewport width<br />
-     A reactive data source
-
 - `uiLayout.cordova()`
 
-     Whether we are running a mobile (Cordova) application
+     Whether we are running a mobile (Cordova) application.
 
-- `uiLayout.touchable()`
+- `uiLayout.height()`
 
-     Whether a touchable device is the primary input way (i.e. no keyboard nor mouse)
+     The current document's viewport height.
 
-- `uiLayout.mobile()`
+     A reactive data source.
 
-     Whether we are running on a mobile device
+- `uiLayout.isXS()`
+- `uiLayout.isSM()`
+- `uiLayout.isMD()`
+- `uiLayout.isST()`
+- `uiLayout.isLG()`
 
-     Please note that, contrarily to other datas, whether we are running, or not, on a mobile device, say a phone,
-     is only a hint, as we do not have any objective way to detect this type of environment.
-     For now, we are tracking a touchable device with a small resolution, or a Cordova environment.
+     Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
+
+     A reactive data source.
+
+- `uiLayout.isXL()`
+
+     Returns `true` if the width of the display is extra large, _i.e._ greater than the `@ui-lg-width` breakpoint.
+
+     A reactive data source.
 
 - `uiLayout.landscape()`
 
-     Whether we are using a landscape layout<br />
-     A reactive data source
+     Whether we are using a landscape layout.
+
+     A reactive data source.
+
+- `uiLayout.mobile()`
+
+     Whether we are running on a mobile device.
+
+     Please note that, contrarily to other datas, whether we are running, or not, on a mobile device, say a phone,
+     is only a hint, as we do not have any objective way to detect this type of environment.
+
+     For now, we are tracking a touchable device with a small resolution, or a Cordova environment.
 
 - `uiLayout.resize()`
 
-     The last resize event timestamp<br />
-     A reactive data source
+     The last resize event timestamp.
+
+     A reactive data source.
+
+- `uiLayout.touchable()`
+
+     Whether a touchable device is the primary input way (i.e. no keyboard nor mouse).
 
 - `uiLayout.view()`
 
-     Returns a `UI_VIEW_XS/SM/MD/ST/LG/XL` constant which corresponds to the current size of the viewport<br />
-     A reactive data source
+     Returns a `UI_VIEW_XS/SM/MD/ST/LG/XL` constant which corresponds to the current size of the viewport.
+
+     A reactive data source.
+
+- `uiLayout.width()`
+
+     The browser viewport width.
+
+     A reactive data source.
 
 ### Constants
 
@@ -256,31 +278,19 @@ The package defines some globally available Blaze helpers:
 
      - `uiView`
 
-          returns the current view size as a string constant
+          Returns the current view size as a string constant.
 
      - `uiXSView`
-
-          test for an extra small-size view
-
      - `uiSMView`
-
-          test for a small-size view
-
      - `uiMDView`
-
-          test for a medium-size view
-
      - `uiSTView`
-
-          test for a standard-size view
-
      - `uiLGView`
 
-          test for a large-size view
+          Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
 
      - `uiXLView`
 
-          test for an extra large-size view
+          Returns `true` if the width of the display is extra large, _i.e._ greater than the `@ui-lg-breakpoint` breakpoint.
 
 ## Maintainer reminder - Test environments
 

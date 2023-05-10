@@ -66,6 +66,15 @@ uiLayout = merge.recursive( true, uiLayout, {
     resize( stamp ){ return _runningDict( 'resize', stamp ); },
     touchable( touchable ){ return _runningDict( 'touchable', touchable ); },
     width( width ){ return _runningDict( 'width', width ); },
+
+    // functions
+    isXS(){ return uiLayout.width() <= UI_XS_WIDTH },
+    isSM(){ return uiLayout.width() <= UI_SM_WIDTH },
+    isMD(){ return uiLayout.width() <= UI_MD_WIDTH },
+    isST(){ return uiLayout.width() <= UI_ST_WIDTH },
+    isLG(){ return uiLayout.width() <= UI_LG_WIDTH },
+    isXL(){ return uiLayout.width() > UI_LG_WIDTH },
+
     view(){
         const w = uiLayout.width();
         //console.log( 'w='+w );

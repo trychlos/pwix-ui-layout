@@ -113,30 +113,30 @@ Template.registerHelper( 'uiView', function(){
 
 // view helper
 Template.registerHelper( 'uiXSView', function(){
-    return uiLayout.view() === UI_VIEW_XS;
+    return uiLayout.width() <= UI_XS_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiSMView', function(){
-    return uiLayout.view() === UI_VIEW_SM;
+    return uiLayout.width() <= UI_SM_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiMDView', function(){
-    return uiLayout.view() === UI_VIEW_MD;
+    return uiLayout.width() <= UI_MD_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiSTView', function(){
-    return uiLayout.view() === UI_VIEW_ST;
+    return uiLayout.width() <= UI_ST_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiLGView', function(){
-    return uiLayout.view() === UI_VIEW_LG;
+    return uiLayout.width() <= UI_LG_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiXLView', function(){
-    return uiLayout.view() === UI_VIEW_XL;
+    return uiLayout.width() > UI_LG_WIDTH;
 });
