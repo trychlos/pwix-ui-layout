@@ -112,6 +112,11 @@ Template.registerHelper( 'uiView', function(){
 });
 
 // view helper
+Template.registerHelper( 'uiXSView', function(){
+    return uiLayout.view() === UI_VIEW_XS;
+});
+
+// view helper
 Template.registerHelper( 'uiSMView', function(){
     return uiLayout.view() === UI_VIEW_SM;
 });

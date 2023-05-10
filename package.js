@@ -10,10 +10,12 @@ Package.onUse( function( api ){
     configure( api );
     api.export([
         'uiLayout',
+        'UI_XS_WIDTH',
         'UI_SM_WIDTH',
         'UI_MD_WIDTH',
         'UI_ST_WIDTH',
         'UI_LG_WIDTH',
+        'UI_VIEW_XS',
         'UI_VIEW_SM',
         'UI_VIEW_MD',
         'UI_VIEW_ST',
@@ -22,7 +24,7 @@ Package.onUse( function( api ){
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.mainModule( 'src/server/js/index.js', 'server' );
-    api.addFiles( 'src/client/css/ui_layout.less', 'client', { isImport: true });
+    api.addFiles( 'src/client/css/ui_constants.less', 'client', { isImport: true });
 });
 
 Package.onTest( function( api ){

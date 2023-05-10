@@ -82,7 +82,10 @@ uiLayout = merge.recursive( true, uiLayout, {
         if( w >= UI_SM_WIDTH ){
             return UI_VIEW_MD;
         }
-        return UI_VIEW_SM;
+        if( w >= UI_XS_WIDTH ){
+            return UI_VIEW_SM;
+        }
+        return UI_VIEW_XS;
     }
 });
 
