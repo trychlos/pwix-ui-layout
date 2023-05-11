@@ -2,6 +2,7 @@
 
 | Version | Release    | Content |
 | ---:    | :---       | :---    |
+| xxx   |  | xxx |
 | 1.2.0   | 2023- 5-11 | Full review of the breakpoints, changing names and sizes, according to statcounter Global stats |
 |         |            | Rename exported ui_layout.css to ui_constants.css |
 |         |            | README: fix dependencies |
