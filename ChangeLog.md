@@ -2,7 +2,7 @@
 
 | Version | Release    | Content |
 | ---:    | :---       | :---    |
-| 1.2.0   |  | Full review of the breakpoints, changing names and sizes, according to statcounter Global stats |
+| 1.2.0   | 2023- 5-11 | Full review of the breakpoints, changing names and sizes, according to statcounter Global stats |
 |         |            | Rename exported ui_layout.css to ui_constants.css |
 |         |            | README: fix dependencies |
 | 1.1.2   | 2023- 5- 1 | Make sure successive calls to configure() override each other (do not add each other) |
@@ -13,4 +13,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, May 1st
+- Last updated on 2023, May 11th

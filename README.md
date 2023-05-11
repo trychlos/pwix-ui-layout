@@ -42,7 +42,7 @@ The package defines some breakpoints, along with corresponding `less` constants.
      - a `md` medium display, until 800px, which covers still 16%
      - a `st` standard display, until 1024px, which covers (only) 10%
      - a `lg` large display, until 1920px, which covers remaining 14%
-     - categorizing larger display as `xl` extra large.
+     - categorizing larger display as extra large `xl`.
 
 This eventually leads to following importable constants:
 
@@ -319,4 +319,4 @@ Each of these dependencies should be installed at application level:
 
 ---
 P. Wieser
-- Last updated on 2023, May 1st
+- Last updated on 2023, May 11th
