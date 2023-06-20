@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.2.1-rc
+### 1.2.1
 
-    Release date: 
+    Release date: 2023- 6-20
 
     - Replace merge dependency with lodash
     - Rename conf to _conf, making clearer this is a private variable
@@ -46,4 +46,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, May 11th
+- Last updated on 2023, June 20th
