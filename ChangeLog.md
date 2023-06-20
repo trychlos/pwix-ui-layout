@@ -1,16 +1,45 @@
-# pwix:layout - ChangeLog
+# pwix:layout
 
-| Version | Release    | Content |
-| ---:    | :---       | :---    |
-| xxx   |  | xxx |
-| 1.2.0   | 2023- 5-11 | Full review of the breakpoints, changing names and sizes, according to statcounter Global stats |
-|         |            | Rename exported ui_layout.css to ui_constants.css |
-|         |            | README: fix dependencies |
-| 1.1.2   | 2023- 5- 1 | Make sure successive calls to configure() override each other (do not add each other) |
-|         |            | Add merge dependency |
-| 1.1.1   | 2023- 1-31 | Fix missing updates |
-| 1.1.0   | 2023- 1-31 | Replace hardcoded NPM dependencies with tmeasday:check-npm-versions (runtime, server-side, development environment only) |
-| 1.0.0   | 2023- 1-28 | Initial release |
+## ChangeLog
+
+### x.X.x
+
+    Release date: 
+
+    - Replace merge dependency with lodash
+
+### 1.2.0
+
+    Release date: 2023- 5-11
+
+    - Full review of the breakpoints, changing names and sizes, according to statcounter Global stats
+    - Rename exported ui_layout.css to ui_constants.css
+    - README: fix dependencies
+
+### 1.1.2
+
+    Release date: 2023- 5- 1
+
+    - Make sure successive calls to configure() override each other (do not add each other)
+    - Add merge dependency
+
+### 1.1.1
+
+    Release date: 2023- 1-31
+
+    - Fix missing updates
+
+### 1.1.0
+
+    Release date: 2023- 1-31
+
+    - Replace hardcoded NPM dependencies with tmeasday:check-npm-versions (runtime, server-side, development environment only)
+
+### 1.0.0
+
+    Release date: 2023- 1-28
+
+    - Initial release
 
 ---
 P. Wieser

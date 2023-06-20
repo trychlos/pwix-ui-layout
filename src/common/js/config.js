@@ -2,7 +2,7 @@
  * pwix:layout/src/common/js/config.js
  */
 
-import merge from 'merge';
+import _ from 'lodash';
 
 //console.log( 'pwix:layout/src/common/js/config.js defining globally exported uiLayout object' );
 
@@ -12,6 +12,6 @@ uiLayout = {
     // should be *in same terms* called both by the client and the server
     configure: function( o ){
         console.log( 'pwix:layout configure() with', o );
-        uiLayout.conf = merge.recursive( true, uiLayout._defaults, o );
+        _.merge( uiLayout.conf, uiLayout._defaults, o );
     }
 };

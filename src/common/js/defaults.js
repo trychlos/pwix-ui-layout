@@ -2,7 +2,7 @@
  * pwix:layout/src/common/js/defaults.js
  */
 
-import merge from 'merge';
+import _ from 'lodash';
 
 uiLayout._defaults = {
     hiddenClass: 'hidden',
@@ -14,4 +14,4 @@ uiLayout._defaults = {
     portraitClass: ''
 };
 
-uiLayout.conf = merge.recursive( true, uiLayout.conf, uiLayout._defaults );
+_.merge( uiLayout.conf, uiLayout._defaults );

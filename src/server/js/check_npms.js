@@ -10,5 +10,5 @@ if( false ){
 
 checkNpmVersions({
     'detect-it': '^4.0.1',
-    'merge': '^2.1.1'
+    'lodash': '^4.17.0'
 }, 'pwix:layout' );

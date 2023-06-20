@@ -306,10 +306,10 @@ Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](ht
 
 Instead we check npm versions of installed packages at runtime, on server startup, in development environment.
 
-Dependencies as of v 1.1.0:
+Dependencies as of v 1.2.1:
 ```
     'detect-it': '^4.0.1',
-    'merge': '^2.1.1'
+    'lodash': '^4.17.0'
 ```
 
 Each of these dependencies should be installed at application level:
