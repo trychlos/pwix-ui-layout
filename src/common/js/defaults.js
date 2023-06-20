@@ -14,4 +14,4 @@ uiLayout._defaults = {
     portraitClass: ''
 };
 
-_.merge( uiLayout.conf, uiLayout._defaults );
+_.merge( uiLayout._conf, uiLayout._defaults );

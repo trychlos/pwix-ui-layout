@@ -8,77 +8,77 @@ import { Template } from 'meteor/templating';
 // class-name helper
 //  let the application insert a predefined class
 Template.registerHelper( 'uiCordovaClass', function(){
-    return uiLayout.cordova() ? uiLayout.conf.cordovaClass : '';
+    return uiLayout.cordova() ? uiLayout._conf.cordovaClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiTouchableClass', function(){
-    return uiLayout.touchable() ? uiLayout.conf.touchableClass : '';
+    return uiLayout.touchable() ? uiLayout._conf.touchableClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiMobileClass', function(){
-    return uiLayout.mobile() ? uiLayout.conf.mobileClass : '';
+    return uiLayout.mobile() ? uiLayout._conf.mobileClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiLandscapeClass', function(){
-    return uiLayout.landscape() ? uiLayout.conf.landscapeClass : '';
+    return uiLayout.landscape() ? uiLayout._conf.landscapeClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiPortraitClass', function(){
-    return uiLayout.Portrait() ? uiLayout.conf.portraitClass : '';
+    return uiLayout.Portrait() ? uiLayout._conf.portraitClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfCordova', function(){
-    return uiLayout.cordova() ? uiLayout.conf.hiddenClass :'';
+    return uiLayout.cordova() ? uiLayout._conf.hiddenClass :'';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfCordova', function(){
-    return uiLayout.cordova() ? uiLayout.conf.visibleClass : '';
+    return uiLayout.cordova() ? uiLayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfTouchable', function(){
-    return uiLayout.touchable() ? uiLayout.conf.hiddenClass : '';
+    return uiLayout.touchable() ? uiLayout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfTouchable', function(){
-    return uiLayout.touchable() ? uiLayout.conf.visibleClass : '';
+    return uiLayout.touchable() ? uiLayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfMobile', function(){
-    return uiLayout.mobile() ? uiLayout.conf.hiddenClass : '';
+    return uiLayout.mobile() ? uiLayout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfMobile', function(){
-    return uiLayout.mobile() ? uiLayout.conf.visibleClass : '';
+    return uiLayout.mobile() ? uiLayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfLandscape', function(){
-    return uiLayout.landscape() ? uiLayout.conf.hiddenClass : '';
+    return uiLayout.landscape() ? uiLayout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfLandscape', function(){
-    return uiLayout.landscape() ? uiLayout.conf.visibleClass : '';
+    return uiLayout.landscape() ? uiLayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfPortrait', function(){
-    return uiLayout.landscape() ? '' : uiLayout.conf.hiddenClass;
+    return uiLayout.landscape() ? '' : uiLayout._conf.hiddenClass;
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfPortrait', function(){
-    return uiLayout.landscape() ? '' : uiLayout.conf.visibleClass;
+    return uiLayout.landscape() ? '' : uiLayout._conf.visibleClass;
 });
 
 // boolean helper

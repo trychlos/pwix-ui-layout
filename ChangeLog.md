@@ -7,6 +7,7 @@
     Release date: 
 
     - Replace merge dependency with lodash
+    - Rename conf to _conf, making clearer this is a private variable
 
 ### 1.2.0
 
