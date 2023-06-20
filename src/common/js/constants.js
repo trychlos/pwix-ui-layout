@@ -2,6 +2,11 @@
  * pwix:layout/src/common/js/constants.js
  */
 
+// verbosity levels
+
+UI_VERBOSE_NONE = 0;
+UI_VERBOSE_CONFIGURE = 0x01 << 0;
+
 // the size of the breakpoints as defined in /src/client/css/ui_constants.less
 UI_XS_WIDTH =  384;
 UI_SM_WIDTH =  432;

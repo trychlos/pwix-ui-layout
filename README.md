@@ -106,7 +106,19 @@ Known configuration options are:
 
      Defaut value is empty.
 
-Please note, as an explicit reminder for the fools, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `uiLayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
+- `verbosity`
+
+     The verbosity level.
+
+     May be `UI_VERBOSE_NONE`, or a or-ed value of following:
+
+     - `UI_VERBOSE_CONFIGURE`
+
+          Trace the configuration actions.
+
+     Defaut value is `UI_VERBOSE_NONE`.
+
+Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `uiLayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
 
 ## Provides
 

@@ -15,6 +15,8 @@ Package.onUse( function( api ){
         'UI_MD_WIDTH',
         'UI_ST_WIDTH',
         'UI_LG_WIDTH',
+        'UI_VERBOSE_NONE',
+        'UI_VERBOSE_CONFIGURE',
         'UI_VIEW_XS',
         'UI_VIEW_SM',
         'UI_VIEW_MD',

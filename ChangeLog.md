@@ -7,6 +7,7 @@
     Release date: 
 
     - Fix uiLayout initialization
+    - Install a minimal verbosity level to trace configuration actions
 
 ### 1.2.1
 

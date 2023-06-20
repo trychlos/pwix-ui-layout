@@ -13,7 +13,8 @@ uiLayout._defaults = {
     touchableClass: '',
     mobileClass: '',
     landscapeClass: '',
-    portraitClass: ''
+    portraitClass: '',
+    verbosity: UI_VERBOSE_NONE
 };
 
 /**
@@ -25,8 +26,12 @@ uiLayout._defaults = {
 uiLayout.configure = function( o ){
     if( o && _.isObject( o )){
         _.merge( uiLayout._conf, uiLayout._defaults, o );
-        console.log( 'pwix:layout configure() with', o, 'building', uiLayout._conf );
+        // be verbose if asked for
+        if( uiLayout._conf.verbosity & UI_VERBOSE_CONFIGURE ){
+            console.log( 'pwix:layout configure() with', o, 'building', uiLayout._conf );
+        }
     }
+    // also acts as a getter
     return uiLayout._conf;
 };
 
