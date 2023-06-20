@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/common/js/config.js
+ * pwix:layout/src/common/js/configure.js
  */
 
 import _ from 'lodash';
@@ -19,9 +19,19 @@ uiLayout = {
         portraitClass: ''
     },
 
-    // should be *in same terms* called both by the client and the server
+    /**
+     * @summary Get/set the package configuration
+     *  Should be called *in same terms* both by the client and the server
+     * @param {Object} o configuration options
+     * @returns {Object} the package configuration
+     */
     configure: function( o ){
-        console.log( 'pwix:layout configure() with', o );
-        _.merge( uiLayout._conf, uiLayout._defaults, o );
+        if( o && _.isObject( o )){
+            _.merge( uiLayout._conf, uiLayout._defaults, o );
+            console.log( 'pwix:layout configure() with', o, 'building', uiLayout._conf );
+        }
+        return uiLayout._conf;
     }
 };
+
+_.merge( uiLayout._conf, uiLayout._defaults );

@@ -2,13 +2,14 @@
 
 ## ChangeLog
 
-### x.X.x
+### 1.2.1-rc
 
     Release date: 
 
     - Replace merge dependency with lodash
     - Rename conf to _conf, making clearer this is a private variable
     - Merge defaults.js and config.js into configure.js
+    - configure() now acts both as a getter and a setter
 
 ### 1.2.0
 

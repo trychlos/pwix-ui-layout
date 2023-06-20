@@ -10,7 +10,8 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|    2 |  |  |
+|    2 | 2023- 6-20 | Have verbosity configuration |
+|    3 |  |  |
 
 ---
 ## Done
