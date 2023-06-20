@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Fix uiLayout initialization
 
 ### 1.2.1
 
