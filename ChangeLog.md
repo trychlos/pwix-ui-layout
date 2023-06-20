@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.2.2-rc
+### 1.2.2
 
-    Release date: 
+    Release date: 2023- 6-20
 
     - Fix uiLayout initialization
     - Install a minimal verbosity level to trace configuration actions
