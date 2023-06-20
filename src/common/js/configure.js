@@ -9,6 +9,16 @@ import _ from 'lodash';
 uiLayout = {
     _conf: {},
 
+    _defaults: {
+        hiddenClass: 'hidden',
+        visibleClass: 'visible',
+        cordovaClass: '',
+        touchableClass: '',
+        mobileClass: '',
+        landscapeClass: '',
+        portraitClass: ''
+    },
+
     // should be *in same terms* called both by the client and the server
     configure: function( o ){
         console.log( 'pwix:layout configure() with', o );

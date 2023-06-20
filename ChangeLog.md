@@ -8,6 +8,7 @@
 
     - Replace merge dependency with lodash
     - Rename conf to _conf, making clearer this is a private variable
+    - Merge defaults.js and config.js into configure.js
 
 ### 1.2.0
 
