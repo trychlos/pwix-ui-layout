@@ -27,7 +27,7 @@ import detectIt from 'detect-it';
                                 // toolbars, etc., includes padding and border but not margin)
  */
 
-import merge from 'merge';
+import _ from 'lodash';
 
 _runningUI = new ReactiveDict();
 
@@ -41,7 +41,7 @@ const _runningDict = function( name, value ){
     return _runningUI.get( name );
 };
 
-uiLayout = merge.recursive( true, uiLayout, {
+_.merge( uiLayout, {
     // the result of the detectIt module
     //  https://www.npmjs.com/package/detect-it
     detectIt: detectIt,

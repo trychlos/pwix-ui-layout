@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Fix uiLayout client setup
 
 ### 1.2.2
 
