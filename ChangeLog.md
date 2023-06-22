@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.2.3-rc
+### 1.2.3
 
-    Release date: 
+    Release date: 2023- 6-22
 
     - Fix uiLayout client setup
 
@@ -59,4 +59,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, June 20th
+- Last updated on 2023, June 22nd
