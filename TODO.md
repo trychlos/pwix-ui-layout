@@ -10,7 +10,8 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|    3 |  |  |
+|    3 | 2023- 7- 2 | As of v 2.0, remove deprecated LESS definitions |
+|    4 |  |  |
 
 ---
 ## Done

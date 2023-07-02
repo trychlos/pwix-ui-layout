@@ -2,11 +2,12 @@
 
 ## ChangeLog
 
-### 1.2.4-rc
+### 1.3.0-rc
 
     Release date: 
 
-    - 
+    - Add SCSS definitions
+    - LESS definitions are still there, but should be seen as deprecated, and will be removed as of a future v 2.0
 
 ### 1.2.3
 

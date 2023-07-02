@@ -32,7 +32,7 @@ all possible cases of running devices.
 
 ## Breakpoints
 
-The package defines some breakpoints, along with corresponding `less` constants. These breakpoints have been carefully chosen to best suit the majority of the display resolution seen on the web, as provided by [statcounter Global stats](https://gs.statcounter.com/screen-resolution-stats). The rationale has been:
+The package defines some breakpoints, along with corresponding `less` and `sass` constants. These breakpoints have been carefully chosen to best suit the majority of the display resolution seen on the web, as provided by [statcounter Global stats](https://gs.statcounter.com/screen-resolution-stats). The rationale has been:
 
 - first, consider only known display resolutions so that percents sum to 100%, thus ignoring the `other` category
 - starting from that, breakpoints are chosen to roughly cover equivalent parts of the population, and as multiples of 16px which is the standard default size for `1em`:
@@ -56,6 +56,20 @@ These constants are thought to be used in media queries, and can be imported in 
 application `less` file as:
 ```
     @import "{pwix:layout}/src/client/css/ui_constants.less";
+```
+
+resp.
+
+- `$ui-xs-width` is 384px
+- `$ui-sm-width` is 432px
+- `$ui-md-width` is 800px
+- `$ui-st-width` is 1024px
+- `$ui-lg-width` is 1920px
+
+These constants are thought to be used in media queries, and can be imported in an
+application `scss` file as:
+```
+    @import "{pwix:layout}/src/client/css/ui_layout.scss";
 ```
 
 ## Configuration

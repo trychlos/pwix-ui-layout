@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:layout',
-    version: '1.2.4-rc',
+    version: '1.3.0-rc',
     summary: 'Client-only Meteor package for responsive layout management',
     git: 'https://github.com/trychlos/pwix:layout',
     documentation: 'README.md'
@@ -27,6 +27,7 @@ Package.onUse( function( api ){
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.mainModule( 'src/server/js/index.js', 'server' );
     api.addFiles( 'src/client/css/ui_constants.less', 'client', { isImport: true });
+    api.addFiles( 'src/client/css/ui_layout.scss', 'client', { isImport: true });
 });
 
 Package.onTest( function( api ){
@@ -39,6 +40,7 @@ Package.onTest( function( api ){
 function configure( api ){
     api.versionsFrom( '2.9.0' );
     api.use( 'ecmascript' );
+    api.use( 'fourseven:scss@4.15.0', 'client' );
     api.use( 'less@4.0.0', 'client' );
     api.use( 'tracker', 'client' );
     api.use( 'reactive-dict', 'client' );

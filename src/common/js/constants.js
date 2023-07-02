@@ -8,6 +8,7 @@ UI_VERBOSE_NONE = 0;
 UI_VERBOSE_CONFIGURE = 0x01 << 0;
 
 // the size of the breakpoints as defined in /src/client/css/ui_constants.less
+// the size of the breakpoints as defined in /src/client/css/ui_layout.scss
 UI_XS_WIDTH =  384;
 UI_SM_WIDTH =  432;
 UI_MD_WIDTH =  800;
