@@ -6,8 +6,7 @@
 
     Release date: 
 
-    - Add SCSS definitions
-    - LESS definitions are still there, but should be seen as deprecated, and will be removed as of a future v 2.0
+    - Rename ui_constants.less as ui_layout.less
 
 ### 1.2.3
 

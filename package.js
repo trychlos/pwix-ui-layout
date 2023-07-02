@@ -26,8 +26,7 @@ Package.onUse( function( api ){
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.mainModule( 'src/server/js/index.js', 'server' );
-    api.addFiles( 'src/client/css/ui_constants.less', 'client', { isImport: true });
-    api.addFiles( 'src/client/css/ui_layout.scss', 'client', { isImport: true });
+    api.addFiles( 'src/client/css/ui_layout.less', 'client', { isImport: true });
 });
 
 Package.onTest( function( api ){
@@ -40,7 +39,6 @@ Package.onTest( function( api ){
 function configure( api ){
     api.versionsFrom( '2.9.0' );
     api.use( 'ecmascript' );
-    api.use( 'fourseven:scss@4.15.0', 'client' );
     api.use( 'less@4.0.0', 'client' );
     api.use( 'tracker', 'client' );
     api.use( 'reactive-dict', 'client' );
