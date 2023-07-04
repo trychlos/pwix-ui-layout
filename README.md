@@ -213,23 +213,23 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 ### Constants
 
-- `UI_XS_WIDTH`
+- `Layout.C.Breakpoints.XS`
 
      an integer constant with `@ui-xs-width` value
 
-- `UI_SM_WIDTH`
+- `Layout.C.Breakpoints.SM`
 
      an integer constant with `@ui-sm-width` value
 
-- `UI_MD_WIDTH`
+- `Layout.C.Breakpoints.MD`
 
      an integer constant with `@ui-md-width` value
 
-- `UI_ST_WIDTH`
+- `Layout.C.Breakpoints.ST`
 
      an integer constant with `@ui-st-width` value
 
-- `UI_LG_WIDTH`
+- `Layout.C.Breakpoints.LG`
 
      an integer constant with `@ui-lg-width` value
 

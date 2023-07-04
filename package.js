@@ -10,11 +10,11 @@ Package.onUse( function( api ){
     configure( api );
     api.export([
         'Layout',
-        'UI_XS_WIDTH',
-        'UI_SM_WIDTH',
-        'UI_MD_WIDTH',
-        'UI_ST_WIDTH',
-        'UI_LG_WIDTH',
+        'Layout.C.Breakpoints.XS',
+        'Layout.C.Breakpoints.SM',
+        'Layout.C.Breakpoints.MD',
+        'Layout.C.Breakpoints.ST',
+        'Layout.C.Breakpoints.LG',
         'UI_VERBOSE_NONE',
         'UI_VERBOSE_CONFIGURE',
         'UI_VIEW_XS',

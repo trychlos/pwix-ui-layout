@@ -113,30 +113,30 @@ Template.registerHelper( 'uiView', function(){
 
 // view helper
 Template.registerHelper( 'uiXSView', function(){
-    return Layout.width() <= UI_XS_WIDTH;
+    return Layout.width() <= Layout.C.Breakpoints.XS;
 });
 
 // view helper
 Template.registerHelper( 'uiSMView', function(){
-    return Layout.width() <= UI_SM_WIDTH;
+    return Layout.width() <= Layout.C.Breakpoints.SM;
 });
 
 // view helper
 Template.registerHelper( 'uiMDView', function(){
-    return Layout.width() <= UI_MD_WIDTH;
+    return Layout.width() <= Layout.C.Breakpoints.MD;
 });
 
 // view helper
 Template.registerHelper( 'uiSTView', function(){
-    return Layout.width() <= UI_ST_WIDTH;
+    return Layout.width() <= Layout.C.Breakpoints.ST;
 });
 
 // view helper
 Template.registerHelper( 'uiLGView', function(){
-    return Layout.width() <= UI_LG_WIDTH;
+    return Layout.width() <= Layout.C.Breakpoints.LG;
 });
 
 // view helper
 Template.registerHelper( 'uiXLView', function(){
-    return Layout.width() > UI_LG_WIDTH;
+    return Layout.width() > Layout.C.Breakpoints.LG;
 });

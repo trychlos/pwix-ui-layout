@@ -68,30 +68,30 @@ _.merge( Layout, {
     width( width ){ return _runningDict( 'width', width ); },
 
     // functions
-    isXS(){ return Layout.width() <= UI_XS_WIDTH },
-    isSM(){ return Layout.width() <= UI_SM_WIDTH },
-    isMD(){ return Layout.width() <= UI_MD_WIDTH },
-    isST(){ return Layout.width() <= UI_ST_WIDTH },
-    isLG(){ return Layout.width() <= UI_LG_WIDTH },
-    isXL(){ return Layout.width() > UI_LG_WIDTH },
+    isXS(){ return Layout.width() <= Layout.C.Breakpoints.XS },
+    isSM(){ return Layout.width() <= Layout.C.Breakpoints.SM },
+    isMD(){ return Layout.width() <= Layout.C.Breakpoints.MD },
+    isST(){ return Layout.width() <= Layout.C.Breakpoints.ST },
+    isLG(){ return Layout.width() <= Layout.C.Breakpoints.LG },
+    isXL(){ return Layout.width() > Layout.C.Breakpoints.LG },
 
     view(){
         const w = Layout.width();
         //console.log( 'w='+w );
         //console.log( window );
-        if( w >= UI_LG_WIDTH ){
+        if( w >= Layout.C.Breakpoints.LG ){
             return UI_VIEW_XL;
         }
-        if( w >= UI_ST_WIDTH ){
+        if( w >= Layout.C.Breakpoints.ST ){
             return UI_VIEW_LG;
         }
-        if( w >= UI_MD_WIDTH ){
+        if( w >= Layout.C.Breakpoints.MD ){
             return UI_VIEW_ST;
         }
-        if( w >= UI_SM_WIDTH ){
+        if( w >= Layout.C.Breakpoints.SM ){
             return UI_VIEW_MD;
         }
-        if( w >= UI_XS_WIDTH ){
+        if( w >= Layout.C.Breakpoints.XS ){
             return UI_VIEW_SM;
         }
         return UI_VIEW_XS;
@@ -104,5 +104,5 @@ Layout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
 
 Tracker.autorun(() => {
     const min = Layout.landscape() ? Layout.height() : Layout.width();
-    Layout.mobile( Layout.cordova() || min <= UI_SM_WIDTH );
+    Layout.mobile( Layout.cordova() || min <= Layout.C.Breakpoints.SM );
 });

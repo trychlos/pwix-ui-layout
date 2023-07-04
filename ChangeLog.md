@@ -7,6 +7,8 @@
     Release date: 
 
     - Rename css/ui_constants.less to stylesheets/layout.less
+    - Rename globaly exported uiLayout to Layout
+    - Review constants organization to not pollute global space
 
 ### 1.2.3
 

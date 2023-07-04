@@ -10,7 +10,6 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|    3 | 2023- 7- 2 | As of v 2.0, remove deprecated LESS definitions |
 |    4 |  |  |
 
 ---
@@ -22,6 +21,8 @@
 |      |            | Fixed |
 |    2 | 2023- 6-20 | Have verbosity configuration |
 |      | 2023- 6-20 | Done |
+|    3 | 2023- 7- 2 | As of v 2.0, remove deprecated LESS definitions |
+|      | 2023- 7- 4 | Cancelled |
 
 ---
 P. Wieser
