@@ -14,7 +14,7 @@ Layout._defaults = {
     mobileClass: '',
     landscapeClass: '',
     portraitClass: '',
-    verbosity: UI_VERBOSE_NONE
+    verbosity: Layout.C.Verbose.NONE
 };
 
 /**
@@ -27,7 +27,7 @@ Layout.configure = function( o ){
     if( o && _.isObject( o )){
         _.merge( Layout._conf, Layout._defaults, o );
         // be verbose if asked for
-        if( Layout._conf.verbosity & UI_VERBOSE_CONFIGURE ){
+        if( Layout._conf.verbosity & Layout.C.Verbose.CONFIGURE ){
             console.log( 'pwix:layout configure() with', o, 'building', Layout._conf );
         }
     }

@@ -10,8 +10,8 @@ Package.onUse( function( api ){
     configure( api );
     api.export([
         'Layout',
-        'UI_VERBOSE_NONE',
-        'UI_VERBOSE_CONFIGURE'
+        'Layout.C.Verbose.NONE',
+        'Layout.C.Verbose.CONFIGURE'
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.mainModule( 'src/server/js/index.js', 'server' );
