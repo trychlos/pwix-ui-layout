@@ -2,7 +2,7 @@
 
 ## Rationale
 
-A client-only Meteor helper package to detect at runtime the nature of the user interface to be displayed:
+A Meteor helper package to detect at runtime the nature of the user interface to be displayed:
 
 - either in portrait or paysage mode
 - either for a large screen (desktop) or a small one (mobile)
@@ -32,7 +32,7 @@ all possible cases of running devices.
 
 ## Breakpoints
 
-The package defines some breakpoints, along with corresponding `less` and `sass` constants. These breakpoints have been carefully chosen to best suit the majority of the display resolution seen on the web, as provided by [statcounter Global stats](https://gs.statcounter.com/screen-resolution-stats). The rationale has been:
+The package defines some breakpoints, along with corresponding `less` constants. These breakpoints have been carefully chosen to best suit the majority of the display resolution seen on the web, as provided by [statcounter Global stats](https://gs.statcounter.com/screen-resolution-stats). The rationale has been:
 
 - first, consider only known display resolutions so that percents sum to 100%, thus ignoring the `other` category
 - starting from that, breakpoints are chosen to roughly cover equivalent parts of the population, and as multiples of 16px which is the standard default size for `1em`:
@@ -40,8 +40,8 @@ The package defines some breakpoints, along with corresponding `less` and `sass`
      - a `xs` extra small display, until 384px, which covers about 29%
      - a `sm` small display, until 432px, which covers additional 32%
      - a `md` medium display, until 800px, which covers still 16%
-     - a `st` standard display, until 1024px, which covers (only) 10%
-     - a `lg` large display, until 1920px, which covers remaining 14%
+     - a `lg` large display, until 1024px, which covers (only) 10%
+     - a `xl` extra large display, until 1920px, which covers remaining 14%
      - categorizing larger display as extra large `xl`.
 
 This eventually leads to following importable constants:
@@ -49,27 +49,13 @@ This eventually leads to following importable constants:
 - `@ui-xs-width` is 384px
 - `@ui-sm-width` is 432px
 - `@ui-md-width` is 800px
-- `@ui-st-width` is 1024px
-- `@ui-lg-width` is 1920px
+- `@ui-lg-width` is 1024px
+- `@ui-xl-width` is 1920px
 
-These constants are thought to be used in media queries, and can be imported in an
-application `less` file as:
+These constants are thought to be used in media queries, and can be imported in an application `less` file as:
+
 ```
-    @import "{pwix:layout}/src/client/css/ui_constants.less";
-```
-
-resp.
-
-- `$ui-xs-width` is 384px
-- `$ui-sm-width` is 432px
-- `$ui-md-width` is 800px
-- `$ui-st-width` is 1024px
-- `$ui-lg-width` is 1920px
-
-These constants are thought to be used in media queries, and can be imported in an
-application `scss` file as:
-```
-    @import "{pwix:layout}/src/client/css/ui_layout.scss";
+    @import "{pwix:layout}/src/client/stylesheets/layout.less";
 ```
 
 ## Configuration
@@ -161,16 +147,16 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 - `Layout.isXS()`
 - `Layout.isSM()`
 - `Layout.isMD()`
-- `Layout.isST()`
 - `Layout.isLG()`
+- `Layout.isXL()`
 
      Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
 
      A reactive data source.
 
-- `Layout.isXL()`
+- `Layout.isXXL()`
 
-     Returns `true` if the width of the display is extra large, _i.e._ greater than the `@ui-lg-width` breakpoint.
+     Returns `true` if the display is wider than extra large, _i.e._ greater than the `@ui-xl-width` breakpoint.
 
      A reactive data source.
 
@@ -201,7 +187,7 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 - `Layout.view()`
 
-     Returns a `Layout.C.View.XS/SM/MD/ST/LG/XL` constant which corresponds to the current size of the viewport.
+     Returns a `Layout.C.View.XS/SM/MD/LG/XL/XXL` constant which corresponds to the current size of the viewport.
 
      A reactive data source.
 
@@ -225,13 +211,13 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
      an integer constant with `@ui-md-width` value
 
-- `Layout.C.Breakpoints.ST`
-
-     an integer constant with `@ui-st-width` value
-
 - `Layout.C.Breakpoints.LG`
 
      an integer constant with `@ui-lg-width` value
+
+- `Layout.C.Breakpoints.XL`
+
+     an integer constant with `@ui-xl-width` value
 
 - `Layout.C.View.XS`
 
@@ -245,10 +231,6 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
      A constant for a medium width view, which may be tested againt the result of `Layout.view()`
 
-- `Layout.C.View.ST`
-
-     A constant for a standard width view, which may be tested againt the result of `Layout.view()`
-
 - `Layout.C.View.LG`
 
      A constant for a large width view, which may be tested againt the result of `Layout.view()`
@@ -257,15 +239,9 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
      A constant for an extra large width view, which may be tested againt the result of `Layout.view()`
 
-### References
+- `Layout.C.View.XXL`
 
-#### `Layout.iBreakpoints`
-
-The array of defined (integer values) breakpoints.
-
-#### `Layout.cBreakpoints`
-
-The array of defined (string constants) breakpoints.
+     A constant for anything wider than an extra large width view, which may be tested againt the result of `Layout.view()`
 
 ### Blaze helpers
 
@@ -309,14 +285,14 @@ The package defines some globally available Blaze helpers:
      - `uiXSView`
      - `uiSMView`
      - `uiMDView`
-     - `uiSTView`
      - `uiLGView`
+     - `uiXLView`
 
           Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
 
-     - `uiXLView`
+     - `uiXXLView`
 
-          Returns `true` if the width of the display is extra large, _i.e._ greater than the `@ui-lg-breakpoint` breakpoint.
+          Returns `true` if the width of the display is more than extra large, _i.e._ greater than the `@ui-xl-breakpoint` breakpoint.
 
 ## Maintainer reminder - Test environments
 
@@ -332,7 +308,7 @@ Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](ht
 
 Instead we check npm versions of installed packages at runtime, on server startup, in development environment.
 
-Dependencies as of v 1.2.1:
+Dependencies as of v 1.3.0:
 ```
     'detect-it': '^4.0.1',
     'lodash': '^4.17.0'

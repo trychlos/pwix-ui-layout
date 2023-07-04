@@ -19,12 +19,14 @@ Layout.C = {
     },
 
     // the view model
+    //  five breakpoints means six model views
     View: {
         XS: 'XS',
         SM: 'SM',
         MD: 'MD',
         LG: 'LG',
-        XL: 'XL'
+        XL: 'XL',
+        XXL: 'XXL'
     }
 };
 

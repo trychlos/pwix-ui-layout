@@ -4,6 +4,6 @@
 
 import '../../common/js/index.js';
 
-import './config.js';
 import './blaze.js';
+import './functions.js';
 import './startup.js';

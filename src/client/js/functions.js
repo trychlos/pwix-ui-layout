@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/client/js/config.js
+ * pwix:layout/src/client/js/functions.js
  */
 
 import { ReactiveDict } from 'meteor/reactive-dict';
@@ -46,7 +46,7 @@ _.merge( Layout, {
     //  https://www.npmjs.com/package/detect-it
     detectIt: detectIt,
 
-    resizeListener(){
+    _resizeListener(){
         //console.log( 'pwix:layout resizing' );
         Layout.resize( new Date());
         //Layout.height( window.innerHeight );
@@ -71,22 +71,22 @@ _.merge( Layout, {
     isXS(){ return Layout.width() <= Layout.C.Breakpoints.XS },
     isSM(){ return Layout.width() <= Layout.C.Breakpoints.SM },
     isMD(){ return Layout.width() <= Layout.C.Breakpoints.MD },
-    isST(){ return Layout.width() <= Layout.C.Breakpoints.ST },
     isLG(){ return Layout.width() <= Layout.C.Breakpoints.LG },
-    isXL(){ return Layout.width() > Layout.C.Breakpoints.LG },
+    isXL(){ return Layout.width() <= Layout.C.Breakpoints.XL },
+    isXXL(){ return Layout.width() > Layout.C.Breakpoints.XL },
 
     view(){
         const w = Layout.width();
         //console.log( 'w='+w );
         //console.log( window );
+        if( w > Layout.C.Breakpoints.XL ){
+            return Layout.C.View.XXL;
+        }
         if( w >= Layout.C.Breakpoints.LG ){
             return Layout.C.View.XL;
         }
-        if( w >= Layout.C.Breakpoints.ST ){
-            return Layout.C.View.LG;
-        }
         if( w >= Layout.C.Breakpoints.MD ){
-            return Layout.C.View.ST;
+            return Layout.C.View.LG;
         }
         if( w >= Layout.C.Breakpoints.SM ){
             return Layout.C.View.MD;
@@ -98,7 +98,7 @@ _.merge( Layout, {
     }
 });
 
-Layout.resizeListener();
+Layout._resizeListener();
 Layout.cordova( Meteor.isCordova );
 Layout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
 

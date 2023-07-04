@@ -9,13 +9,10 @@ Package.describe({
 Package.onUse( function( api ){
     configure( api );
     api.export([
-        'Layout',
-        'Layout.C.Verbose.NONE',
-        'Layout.C.Verbose.CONFIGURE'
+        'Layout'
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.mainModule( 'src/server/js/index.js', 'server' );
-    api.addFiles( 'src/client/stylesheets/layout.less', 'client', { isImport: true });
 });
 
 Package.onTest( function( api ){
@@ -33,6 +30,7 @@ function configure( api ){
     api.use( 'reactive-dict', 'client' );
     api.use( 'reactive-var', 'client' );
     api.use( 'tmeasday:check-npm-versions@1.0.2', 'server' );
+    api.addFiles( 'src/client/stylesheets/layout.less', 'client', { isImport: true });
 }
 
 // NPM dependencies are checked in /src/server/js/check_npms.js
