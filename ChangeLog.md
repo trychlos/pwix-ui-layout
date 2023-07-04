@@ -2,13 +2,14 @@
 
 ## ChangeLog
 
-### 1.3.0-rc
+### 1.3.0
 
-    Release date: 
+    Release date: 2023- 7- 4
 
     - Rename css/ui_constants.less to stylesheets/layout.less
     - Rename globaly exported uiLayout to Layout
     - Review constants organization to not pollute global space
+    - Have (more standard) XS, SM, MD, LG and XL sizes
 
 ### 1.2.3
 
@@ -67,4 +68,4 @@
 
 ---
 P. Wieser
-- Last updated on 2023, June 22nd
+- Last updated on 2023, July, 4th
