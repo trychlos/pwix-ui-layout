@@ -23,7 +23,7 @@ UI_VIEW_ST = 'UI_VIEW_ST';
 UI_VIEW_LG = 'UI_VIEW_LG';
 UI_VIEW_XL = 'UI_VIEW_XL';
 
-uiLayout.iBreakpoints = [
+Layout.iBreakpoints = [
     UI_XS_WIDTH,
     UI_SM_WIDTH,
     UI_MD_WIDTH,
@@ -31,7 +31,7 @@ uiLayout.iBreakpoints = [
     UI_LG_WIDTH
 ];
 
-uiLayout.cBreakpoints = [
+Layout.cBreakpoints = [
     UI_VIEW_XS,
     UI_VIEW_SM,
     UI_VIEW_MD,

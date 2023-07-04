@@ -8,135 +8,135 @@ import { Template } from 'meteor/templating';
 // class-name helper
 //  let the application insert a predefined class
 Template.registerHelper( 'uiCordovaClass', function(){
-    return uiLayout.cordova() ? uiLayout._conf.cordovaClass : '';
+    return Layout.cordova() ? Layout._conf.cordovaClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiTouchableClass', function(){
-    return uiLayout.touchable() ? uiLayout._conf.touchableClass : '';
+    return Layout.touchable() ? Layout._conf.touchableClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiMobileClass', function(){
-    return uiLayout.mobile() ? uiLayout._conf.mobileClass : '';
+    return Layout.mobile() ? Layout._conf.mobileClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiLandscapeClass', function(){
-    return uiLayout.landscape() ? uiLayout._conf.landscapeClass : '';
+    return Layout.landscape() ? Layout._conf.landscapeClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiPortraitClass', function(){
-    return uiLayout.Portrait() ? uiLayout._conf.portraitClass : '';
+    return Layout.Portrait() ? Layout._conf.portraitClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfCordova', function(){
-    return uiLayout.cordova() ? uiLayout._conf.hiddenClass :'';
+    return Layout.cordova() ? Layout._conf.hiddenClass :'';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfCordova', function(){
-    return uiLayout.cordova() ? uiLayout._conf.visibleClass : '';
+    return Layout.cordova() ? Layout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfTouchable', function(){
-    return uiLayout.touchable() ? uiLayout._conf.hiddenClass : '';
+    return Layout.touchable() ? Layout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfTouchable', function(){
-    return uiLayout.touchable() ? uiLayout._conf.visibleClass : '';
+    return Layout.touchable() ? Layout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfMobile', function(){
-    return uiLayout.mobile() ? uiLayout._conf.hiddenClass : '';
+    return Layout.mobile() ? Layout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfMobile', function(){
-    return uiLayout.mobile() ? uiLayout._conf.visibleClass : '';
+    return Layout.mobile() ? Layout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfLandscape', function(){
-    return uiLayout.landscape() ? uiLayout._conf.hiddenClass : '';
+    return Layout.landscape() ? Layout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfLandscape', function(){
-    return uiLayout.landscape() ? uiLayout._conf.visibleClass : '';
+    return Layout.landscape() ? Layout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfPortrait', function(){
-    return uiLayout.landscape() ? '' : uiLayout._conf.hiddenClass;
+    return Layout.landscape() ? '' : Layout._conf.hiddenClass;
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfPortrait', function(){
-    return uiLayout.landscape() ? '' : uiLayout._conf.visibleClass;
+    return Layout.landscape() ? '' : Layout._conf.visibleClass;
 });
 
 // boolean helper
 Template.registerHelper( 'uiCordova', function(){
-    return uiLayout.cordova();
+    return Layout.cordova();
 });
 
 // boolean helper
 Template.registerHelper( 'uiTouchable', function(){
-    return uiLayout.touchable();
+    return Layout.touchable();
 });
 
 // boolean helper
 Template.registerHelper( 'uiMobile', function(){
-    return uiLayout.mobile();
+    return Layout.mobile();
 });
 
 // boolean helper
 Template.registerHelper( 'uiLandscape', function(){
-    return uiLayout.landscape();
+    return Layout.landscape();
 });
 
 // boolean helper
 Template.registerHelper( 'uiPortrait', function(){
-    return !uiLayout.landscape();
+    return !Layout.landscape();
 });
 
 // view helper
 Template.registerHelper( 'uiView', function(){
-    return uiLayout.view();
+    return Layout.view();
 });
 
 // view helper
 Template.registerHelper( 'uiXSView', function(){
-    return uiLayout.width() <= UI_XS_WIDTH;
+    return Layout.width() <= UI_XS_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiSMView', function(){
-    return uiLayout.width() <= UI_SM_WIDTH;
+    return Layout.width() <= UI_SM_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiMDView', function(){
-    return uiLayout.width() <= UI_MD_WIDTH;
+    return Layout.width() <= UI_MD_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiSTView', function(){
-    return uiLayout.width() <= UI_ST_WIDTH;
+    return Layout.width() <= UI_ST_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiLGView', function(){
-    return uiLayout.width() <= UI_LG_WIDTH;
+    return Layout.width() <= UI_LG_WIDTH;
 });
 
 // view helper
 Template.registerHelper( 'uiXLView', function(){
-    return uiLayout.width() > UI_LG_WIDTH;
+    return Layout.width() > UI_LG_WIDTH;
 });

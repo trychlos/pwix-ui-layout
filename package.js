@@ -9,7 +9,7 @@ Package.describe({
 Package.onUse( function( api ){
     configure( api );
     api.export([
-        'uiLayout',
+        'Layout',
         'UI_XS_WIDTH',
         'UI_SM_WIDTH',
         'UI_MD_WIDTH',
@@ -26,7 +26,7 @@ Package.onUse( function( api ){
     ]);
     api.mainModule( 'src/client/js/index.js', 'client' );
     api.mainModule( 'src/server/js/index.js', 'server' );
-    api.addFiles( 'src/client/css/ui_layout.less', 'client', { isImport: true });
+    api.addFiles( 'src/client/stylesheets/layout.less', 'client', { isImport: true });
 });
 
 Package.onTest( function( api ){

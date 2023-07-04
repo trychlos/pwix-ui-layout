@@ -12,13 +12,13 @@
 
     Release date: 2023- 6-22
 
-    - Fix uiLayout client setup
+    - Fix Layout client setup
 
 ### 1.2.2
 
     Release date: 2023- 6-20
 
-    - Fix uiLayout initialization
+    - Fix Layout initialization
     - Install a minimal verbosity level to trace configuration actions
 
 ### 1.2.1

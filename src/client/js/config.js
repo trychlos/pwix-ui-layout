@@ -41,21 +41,21 @@ const _runningDict = function( name, value ){
     return _runningUI.get( name );
 };
 
-_.merge( uiLayout, {
+_.merge( Layout, {
     // the result of the detectIt module
     //  https://www.npmjs.com/package/detect-it
     detectIt: detectIt,
 
     resizeListener(){
         //console.log( 'pwix:layout resizing' );
-        uiLayout.resize( new Date());
-        //uiLayout.height( window.innerHeight );
-        //uiLayout.width( window.innerWidth );
-        //uiLayout.height( window.screen.availHeight );
-        //uiLayout.width( window.screen.availWidth );
-        uiLayout.height( document.documentElement.clientHeight );
-        uiLayout.width( document.documentElement.clientWidth );
-        uiLayout.landscape( uiLayout.width() > uiLayout.height());
+        Layout.resize( new Date());
+        //Layout.height( window.innerHeight );
+        //Layout.width( window.innerWidth );
+        //Layout.height( window.screen.availHeight );
+        //Layout.width( window.screen.availWidth );
+        Layout.height( document.documentElement.clientHeight );
+        Layout.width( document.documentElement.clientWidth );
+        Layout.landscape( Layout.width() > Layout.height());
     },
 
     // reactive getters / setters
@@ -68,15 +68,15 @@ _.merge( uiLayout, {
     width( width ){ return _runningDict( 'width', width ); },
 
     // functions
-    isXS(){ return uiLayout.width() <= UI_XS_WIDTH },
-    isSM(){ return uiLayout.width() <= UI_SM_WIDTH },
-    isMD(){ return uiLayout.width() <= UI_MD_WIDTH },
-    isST(){ return uiLayout.width() <= UI_ST_WIDTH },
-    isLG(){ return uiLayout.width() <= UI_LG_WIDTH },
-    isXL(){ return uiLayout.width() > UI_LG_WIDTH },
+    isXS(){ return Layout.width() <= UI_XS_WIDTH },
+    isSM(){ return Layout.width() <= UI_SM_WIDTH },
+    isMD(){ return Layout.width() <= UI_MD_WIDTH },
+    isST(){ return Layout.width() <= UI_ST_WIDTH },
+    isLG(){ return Layout.width() <= UI_LG_WIDTH },
+    isXL(){ return Layout.width() > UI_LG_WIDTH },
 
     view(){
-        const w = uiLayout.width();
+        const w = Layout.width();
         //console.log( 'w='+w );
         //console.log( window );
         if( w >= UI_LG_WIDTH ){
@@ -98,11 +98,11 @@ _.merge( uiLayout, {
     }
 });
 
-uiLayout.resizeListener();
-uiLayout.cordova( Meteor.isCordova );
-uiLayout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
+Layout.resizeListener();
+Layout.cordova( Meteor.isCordova );
+Layout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
 
 Tracker.autorun(() => {
-    const min = uiLayout.landscape() ? uiLayout.height() : uiLayout.width();
-    uiLayout.mobile( uiLayout.cordova() || min <= UI_SM_WIDTH );
+    const min = Layout.landscape() ? Layout.height() : Layout.width();
+    Layout.mobile( Layout.cordova() || min <= UI_SM_WIDTH );
 });

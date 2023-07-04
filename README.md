@@ -74,7 +74,7 @@ application `scss` file as:
 
 ## Configuration
 
-The package's behavior can be configured through a call to the `uiLayout.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
+The package's behavior can be configured through a call to the `Layout.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
 
 Known configuration options are:
 
@@ -132,55 +132,55 @@ Known configuration options are:
 
      Defaut value is `UI_VERBOSE_NONE`.
 
-Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `uiLayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
+Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `Layout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
 
 ## Provides
 
 ### A global object
 
-- `uiLayout`
+- `Layout`
 
 ### The detectIt result
 
-- `uiLayout.detectIt{ ... }`
+- `Layout.detectIt{ ... }`
 
 The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it).
 
 ### Methods
 
-- `uiLayout.cordova()`
+- `Layout.cordova()`
 
      Whether we are running a mobile (Cordova) application.
 
-- `uiLayout.height()`
+- `Layout.height()`
 
      The current document's viewport height.
 
      A reactive data source.
 
-- `uiLayout.isXS()`
-- `uiLayout.isSM()`
-- `uiLayout.isMD()`
-- `uiLayout.isST()`
-- `uiLayout.isLG()`
+- `Layout.isXS()`
+- `Layout.isSM()`
+- `Layout.isMD()`
+- `Layout.isST()`
+- `Layout.isLG()`
 
      Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
 
      A reactive data source.
 
-- `uiLayout.isXL()`
+- `Layout.isXL()`
 
      Returns `true` if the width of the display is extra large, _i.e._ greater than the `@ui-lg-width` breakpoint.
 
      A reactive data source.
 
-- `uiLayout.landscape()`
+- `Layout.landscape()`
 
      Whether we are using a landscape layout.
 
      A reactive data source.
 
-- `uiLayout.mobile()`
+- `Layout.mobile()`
 
      Whether we are running on a mobile device.
 
@@ -189,23 +189,23 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
      For now, we are tracking a touchable device with a small resolution, or a Cordova environment.
 
-- `uiLayout.resize()`
+- `Layout.resize()`
 
      The last resize event timestamp.
 
      A reactive data source.
 
-- `uiLayout.touchable()`
+- `Layout.touchable()`
 
      Whether a touchable device is the primary input way (i.e. no keyboard nor mouse).
 
-- `uiLayout.view()`
+- `Layout.view()`
 
      Returns a `UI_VIEW_XS/SM/MD/ST/LG/XL` constant which corresponds to the current size of the viewport.
 
      A reactive data source.
 
-- `uiLayout.width()`
+- `Layout.width()`
 
      The browser viewport width.
 
@@ -235,35 +235,35 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 - `UI_VIEW_XS`
 
-     A constant for an extra small width view, which may be tested againt the result of `uiLayout.view()`
+     A constant for an extra small width view, which may be tested againt the result of `Layout.view()`
 
 - `UI_VIEW_SM`
 
-     A constant for a small width view, which may be tested againt the result of `uiLayout.view()`
+     A constant for a small width view, which may be tested againt the result of `Layout.view()`
 
 - `UI_VIEW_MD`
 
-     A constant for a medium width view, which may be tested againt the result of `uiLayout.view()`
+     A constant for a medium width view, which may be tested againt the result of `Layout.view()`
 
 - `UI_VIEW_ST`
 
-     A constant for a standard width view, which may be tested againt the result of `uiLayout.view()`
+     A constant for a standard width view, which may be tested againt the result of `Layout.view()`
 
 - `UI_VIEW_LG`
 
-     A constant for a large width view, which may be tested againt the result of `uiLayout.view()`
+     A constant for a large width view, which may be tested againt the result of `Layout.view()`
 
 - `UI_VIEW_XL`
 
-     A constant for an extra large width view, which may be tested againt the result of `uiLayout.view()`
+     A constant for an extra large width view, which may be tested againt the result of `Layout.view()`
 
 ### References
 
-#### `uiLayout.iBreakpoints`
+#### `Layout.iBreakpoints`
 
 The array of defined (integer values) breakpoints.
 
-#### `uiLayout.cBreakpoints`
+#### `Layout.cBreakpoints`
 
 The array of defined (string constants) breakpoints.
 

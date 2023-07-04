@@ -4,9 +4,9 @@
 
 import _ from 'lodash';
 
-uiLayout._conf = {};
+Layout._conf = {};
 
-uiLayout._defaults = {
+Layout._defaults = {
     hiddenClass: 'hidden',
     visibleClass: 'visible',
     cordovaClass: '',
@@ -23,16 +23,16 @@ uiLayout._defaults = {
  * @param {Object} o configuration options
  * @returns {Object} the package configuration
  */
-uiLayout.configure = function( o ){
+Layout.configure = function( o ){
     if( o && _.isObject( o )){
-        _.merge( uiLayout._conf, uiLayout._defaults, o );
+        _.merge( Layout._conf, Layout._defaults, o );
         // be verbose if asked for
-        if( uiLayout._conf.verbosity & UI_VERBOSE_CONFIGURE ){
-            console.log( 'pwix:layout configure() with', o, 'building', uiLayout._conf );
+        if( Layout._conf.verbosity & UI_VERBOSE_CONFIGURE ){
+            console.log( 'pwix:layout configure() with', o, 'building', Layout._conf );
         }
     }
     // also acts as a getter
-    return uiLayout._conf;
+    return Layout._conf;
 };
 
-_.merge( uiLayout._conf, uiLayout._defaults );
+_.merge( Layout._conf, Layout._defaults );
