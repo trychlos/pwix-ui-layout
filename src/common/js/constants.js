@@ -29,20 +29,3 @@ Layout.C = {
         XXL: 'XXL'
     }
 };
-
-Layout.iBreakpoints = [
-    Layout.C.Breakpoints.XS,
-    Layout.C.Breakpoints.SM,
-    Layout.C.Breakpoints.MD,
-    Layout.C.Breakpoints.ST,
-    Layout.C.Breakpoints.LG
-];
-
-Layout.cBreakpoints = [
-    UI_VIEW_XS,
-    UI_VIEW_SM,
-    UI_VIEW_MD,
-    UI_VIEW_ST,
-    UI_VIEW_LG,
-    UI_VIEW_XL
-];

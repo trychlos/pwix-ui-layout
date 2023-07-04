@@ -127,16 +127,16 @@ Template.registerHelper( 'uiMDView', function(){
 });
 
 // view helper
-Template.registerHelper( 'uiSTView', function(){
-    return Layout.width() <= Layout.C.Breakpoints.ST;
-});
-
-// view helper
 Template.registerHelper( 'uiLGView', function(){
     return Layout.width() <= Layout.C.Breakpoints.LG;
 });
 
 // view helper
 Template.registerHelper( 'uiXLView', function(){
-    return Layout.width() > Layout.C.Breakpoints.LG;
+    return Layout.width() <= Layout.C.Breakpoints.XL;
+});
+
+// view helper
+Template.registerHelper( 'uiXXLView', function(){
+    return Layout.width() > Layout.C.Breakpoints.XL;
 });
