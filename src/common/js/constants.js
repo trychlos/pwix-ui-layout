@@ -28,20 +28,6 @@ Layout.C = {
     }
 };
 
-Layout.C.Breakpoints.XS =  384;
-Layout.C.Breakpoints.SM =  432;
-Layout.C.Breakpoints.MD =  800;
-Layout.C.Breakpoints.ST = 1024;
-Layout.C.Breakpoints.LG = 1920;
-
-// the view model
-UI_VIEW_XS = 'UI_VIEW_XS';
-UI_VIEW_SM = 'UI_VIEW_SM';
-UI_VIEW_MD = 'UI_VIEW_MD';
-UI_VIEW_ST = 'UI_VIEW_ST';
-UI_VIEW_LG = 'UI_VIEW_LG';
-UI_VIEW_XL = 'UI_VIEW_XL';
-
 Layout.iBreakpoints = [
     Layout.C.Breakpoints.XS,
     Layout.C.Breakpoints.SM,

@@ -80,21 +80,21 @@ _.merge( Layout, {
         //console.log( 'w='+w );
         //console.log( window );
         if( w >= Layout.C.Breakpoints.LG ){
-            return UI_VIEW_XL;
+            return Layout.C.View.XL;
         }
         if( w >= Layout.C.Breakpoints.ST ){
-            return UI_VIEW_LG;
+            return Layout.C.View.LG;
         }
         if( w >= Layout.C.Breakpoints.MD ){
-            return UI_VIEW_ST;
+            return Layout.C.View.ST;
         }
         if( w >= Layout.C.Breakpoints.SM ){
-            return UI_VIEW_MD;
+            return Layout.C.View.MD;
         }
         if( w >= Layout.C.Breakpoints.XS ){
-            return UI_VIEW_SM;
+            return Layout.C.View.SM;
         }
-        return UI_VIEW_XS;
+        return Layout.C.View.XS;
     }
 });
 

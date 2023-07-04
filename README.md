@@ -201,7 +201,7 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 - `Layout.view()`
 
-     Returns a `UI_VIEW_XS/SM/MD/ST/LG/XL` constant which corresponds to the current size of the viewport.
+     Returns a `Layout.C.View.XS/SM/MD/ST/LG/XL` constant which corresponds to the current size of the viewport.
 
      A reactive data source.
 
@@ -233,27 +233,27 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
      an integer constant with `@ui-lg-width` value
 
-- `UI_VIEW_XS`
+- `Layout.C.View.XS`
 
      A constant for an extra small width view, which may be tested againt the result of `Layout.view()`
 
-- `UI_VIEW_SM`
+- `Layout.C.View.SM`
 
      A constant for a small width view, which may be tested againt the result of `Layout.view()`
 
-- `UI_VIEW_MD`
+- `Layout.C.View.MD`
 
      A constant for a medium width view, which may be tested againt the result of `Layout.view()`
 
-- `UI_VIEW_ST`
+- `Layout.C.View.ST`
 
      A constant for a standard width view, which may be tested againt the result of `Layout.view()`
 
-- `UI_VIEW_LG`
+- `Layout.C.View.LG`
 
      A constant for a large width view, which may be tested againt the result of `Layout.view()`
 
-- `UI_VIEW_XL`
+- `Layout.C.View.XL`
 
      A constant for an extra large width view, which may be tested againt the result of `Layout.view()`
 
