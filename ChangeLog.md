@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - Rename ui_constants.less as ui_layout.less
+    - Rename css/ui_constants.less to stylesheets/layout.less
 
 ### 1.2.3
 
