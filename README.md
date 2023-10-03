@@ -294,13 +294,20 @@ The package defines some globally available Blaze helpers:
 
           Returns `true` if the width of the display is more than extra large, _i.e._ greater than the `@ui-xl-breakpoint` breakpoint.
 
-## Maintainer reminder - Test environments
+## Test environments
 
-As a reminder, we have tested this package on following devices:
+This package has been tested on following devices:
 
 - XPS13 HDPI: 3200x1800px
+     XL in landscape mode
+
 - Samsung Tab S: 1280x680px
-- Samsung S8: 360x670
+     MD in portrait mode
+     LG in landscape mode
+
+- Samsung Galaxy S8: 360x670
+     XS in portrait mode
+     MD in landscape mode
 
 ## NPM peer dependencies
 
