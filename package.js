@@ -23,13 +23,13 @@ Package.onTest( function( api ){
 });
 
 function configure( api ){
-    api.versionsFrom( '2.9.0' );
+    api.versionsFrom([ '2.9.0', '3.0-rc.0' ]);
     api.use( 'ecmascript' );
     api.use( 'less@4.0.0', 'client' );
     api.use( 'tracker', 'client' );
     api.use( 'reactive-dict', 'client' );
     api.use( 'reactive-var', 'client' );
-    api.use( 'tmeasday:check-npm-versions@1.0.2', 'server' );
+    api.use( 'tmeasday:check-npm-versions@1.0.2 || 2.0.0-beta.0', 'server' );
     api.addFiles( 'src/client/stylesheets/layout.less', 'client', { isImport: true });
 }
 
