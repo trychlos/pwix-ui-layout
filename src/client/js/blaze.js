@@ -8,135 +8,135 @@ import { Template } from 'meteor/templating';
 // class-name helper
 //  let the application insert a predefined class
 Template.registerHelper( 'uiCordovaClass', function(){
-    return Layout.cordova() ? Layout._conf.cordovaClass : '';
+    return UILayout.cordova() ? UILayout._conf.cordovaClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiTouchableClass', function(){
-    return Layout.touchable() ? Layout._conf.touchableClass : '';
+    return UILayout.touchable() ? UILayout._conf.touchableClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiMobileClass', function(){
-    return Layout.mobile() ? Layout._conf.mobileClass : '';
+    return UILayout.mobile() ? UILayout._conf.mobileClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiLandscapeClass', function(){
-    return Layout.landscape() ? Layout._conf.landscapeClass : '';
+    return UILayout.landscape() ? UILayout._conf.landscapeClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiPortraitClass', function(){
-    return Layout.Portrait() ? Layout._conf.portraitClass : '';
+    return UILayout.Portrait() ? UILayout._conf.portraitClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfCordova', function(){
-    return Layout.cordova() ? Layout._conf.hiddenClass :'';
+    return UILayout.cordova() ? UILayout._conf.hiddenClass :'';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfCordova', function(){
-    return Layout.cordova() ? Layout._conf.visibleClass : '';
+    return UILayout.cordova() ? UILayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfTouchable', function(){
-    return Layout.touchable() ? Layout._conf.hiddenClass : '';
+    return UILayout.touchable() ? UILayout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfTouchable', function(){
-    return Layout.touchable() ? Layout._conf.visibleClass : '';
+    return UILayout.touchable() ? UILayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfMobile', function(){
-    return Layout.mobile() ? Layout._conf.hiddenClass : '';
+    return UILayout.mobile() ? UILayout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfMobile', function(){
-    return Layout.mobile() ? Layout._conf.visibleClass : '';
+    return UILayout.mobile() ? UILayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfLandscape', function(){
-    return Layout.landscape() ? Layout._conf.hiddenClass : '';
+    return UILayout.landscape() ? UILayout._conf.hiddenClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfLandscape', function(){
-    return Layout.landscape() ? Layout._conf.visibleClass : '';
+    return UILayout.landscape() ? UILayout._conf.visibleClass : '';
 });
 
 // class-name helper
 Template.registerHelper( 'uiHiddenIfPortrait', function(){
-    return Layout.landscape() ? '' : Layout._conf.hiddenClass;
+    return UILayout.landscape() ? '' : UILayout._conf.hiddenClass;
 });
 
 // class-name helper
 Template.registerHelper( 'uiVisibleIfPortrait', function(){
-    return Layout.landscape() ? '' : Layout._conf.visibleClass;
+    return UILayout.landscape() ? '' : UILayout._conf.visibleClass;
 });
 
 // boolean helper
 Template.registerHelper( 'uiCordova', function(){
-    return Layout.cordova();
+    return UILayout.cordova();
 });
 
 // boolean helper
 Template.registerHelper( 'uiTouchable', function(){
-    return Layout.touchable();
+    return UILayout.touchable();
 });
 
 // boolean helper
 Template.registerHelper( 'uiMobile', function(){
-    return Layout.mobile();
+    return UILayout.mobile();
 });
 
 // boolean helper
 Template.registerHelper( 'uiLandscape', function(){
-    return Layout.landscape();
+    return UILayout.landscape();
 });
 
 // boolean helper
 Template.registerHelper( 'uiPortrait', function(){
-    return !Layout.landscape();
+    return !UILayout.landscape();
 });
 
 // view helper
 Template.registerHelper( 'uiView', function(){
-    return Layout.view();
+    return UILayout.view();
 });
 
 // view helper
 Template.registerHelper( 'uiXSView', function(){
-    return Layout.width() <= Layout.C.Breakpoints.XS;
+    return UILayout.width() <= UILayout.C.Breakpoints.XS;
 });
 
 // view helper
 Template.registerHelper( 'uiSMView', function(){
-    return Layout.width() <= Layout.C.Breakpoints.SM;
+    return UILayout.width() <= UILayout.C.Breakpoints.SM;
 });
 
 // view helper
 Template.registerHelper( 'uiMDView', function(){
-    return Layout.width() <= Layout.C.Breakpoints.MD;
+    return UILayout.width() <= UILayout.C.Breakpoints.MD;
 });
 
 // view helper
 Template.registerHelper( 'uiLGView', function(){
-    return Layout.width() <= Layout.C.Breakpoints.LG;
+    return UILayout.width() <= UILayout.C.Breakpoints.LG;
 });
 
 // view helper
 Template.registerHelper( 'uiXLView', function(){
-    return Layout.width() <= Layout.C.Breakpoints.XL;
+    return UILayout.width() <= UILayout.C.Breakpoints.XL;
 });
 
 // view helper
 Template.registerHelper( 'uiXXLView', function(){
-    return Layout.width() > Layout.C.Breakpoints.XL;
+    return UILayout.width() > UILayout.C.Breakpoints.XL;
 });

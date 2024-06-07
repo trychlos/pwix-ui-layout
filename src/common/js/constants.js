@@ -2,7 +2,7 @@
  * pwix:ui-layout/src/common/js/constants.js
  */
 
-Layout.C = {
+UILayout.C = {
     // the size of the breakpoints as defined in /src/client/stylesheets/layout.less
     Breakpoints: {
         XS:  384,

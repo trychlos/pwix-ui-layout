@@ -62,7 +62,7 @@ These constants are thought to be used in media queries, and can be imported in 
 
 ## Configuration
 
-The package's behavior can be configured through a call to the `Layout.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
+The package's behavior can be configured through a call to the `UILayout.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
 
 Known configuration options are:
 
@@ -112,63 +112,63 @@ Known configuration options are:
 
      The verbosity level.
 
-     May be `Layout.C.Verbose.NONE`, or a or-ed value of following:
+     May be `UILayout.C.Verbose.NONE`, or a or-ed value of following:
 
-     - `Layout.C.Verbose.CONFIGURE`
+     - `UILayout.C.Verbose.CONFIGURE`
 
           Trace the configuration actions.
 
-     Defaut value is `Layout.C.Verbose.NONE`.
+     Defaut value is `UILayout.C.Verbose.NONE`.
 
-Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `Layout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
+Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `UILayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
 
 ## Provides
 
 ### A global object
 
-- `Layout`
+- `UILayout`
 
 ### The detectIt result
 
-- `Layout.detectIt{ ... }`
+- `UILayout.detectIt{ ... }`
 
 The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it).
 
 ### Methods
 
-- `Layout.cordova()`
+- `UILayout.cordova()`
 
      Whether we are running a mobile (Cordova) application.
 
-- `Layout.height()`
+- `UILayout.height()`
 
      The current document's viewport height.
 
      A reactive data source.
 
-- `Layout.isXS()`
-- `Layout.isSM()`
-- `Layout.isMD()`
-- `Layout.isLG()`
-- `Layout.isXL()`
+- `UILayout.isXS()`
+- `UILayout.isSM()`
+- `UILayout.isMD()`
+- `UILayout.isLG()`
+- `UILayout.isXL()`
 
      Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
 
      A reactive data source.
 
-- `Layout.isXXL()`
+- `UILayout.isXXL()`
 
      Returns `true` if the display is wider than extra large, _i.e._ greater than the `@ui-xl-width` breakpoint.
 
      A reactive data source.
 
-- `Layout.landscape()`
+- `UILayout.landscape()`
 
      Whether we are using a landscape layout.
 
      A reactive data source.
 
-- `Layout.mobile()`
+- `UILayout.mobile()`
 
      Whether we are running on a mobile device.
 
@@ -177,23 +177,23 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
      For now, we are tracking a touchable device with a small resolution, or a Cordova environment.
 
-- `Layout.resize()`
+- `UILayout.resize()`
 
      The last resize event timestamp.
 
      A reactive data source.
 
-- `Layout.touchable()`
+- `UILayout.touchable()`
 
      Whether a touchable device is the primary input way (i.e. no keyboard nor mouse).
 
-- `Layout.view()`
+- `UILayout.view()`
 
-     Returns a `Layout.C.View.XS/SM/MD/LG/XL/XXL` constant which corresponds to the current size of the viewport.
+     Returns a `UILayout.C.View.XS/SM/MD/LG/XL/XXL` constant which corresponds to the current size of the viewport.
 
      A reactive data source.
 
-- `Layout.width()`
+- `UILayout.width()`
 
      The browser viewport width.
 
@@ -201,49 +201,49 @@ The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it)
 
 ### Constants
 
-- `Layout.C.Breakpoints.XS`
+- `UILayout.C.Breakpoints.XS`
 
      an integer constant with `@ui-xs-width` value
 
-- `Layout.C.Breakpoints.SM`
+- `UILayout.C.Breakpoints.SM`
 
      an integer constant with `@ui-sm-width` value
 
-- `Layout.C.Breakpoints.MD`
+- `UILayout.C.Breakpoints.MD`
 
      an integer constant with `@ui-md-width` value
 
-- `Layout.C.Breakpoints.LG`
+- `UILayout.C.Breakpoints.LG`
 
      an integer constant with `@ui-lg-width` value
 
-- `Layout.C.Breakpoints.XL`
+- `UILayout.C.Breakpoints.XL`
 
      an integer constant with `@ui-xl-width` value
 
-- `Layout.C.View.XS`
+- `UILayout.C.View.XS`
 
-     A constant for an extra small width view, which may be tested againt the result of `Layout.view()`
+     A constant for an extra small width view, which may be tested againt the result of `UILayout.view()`
 
-- `Layout.C.View.SM`
+- `UILayout.C.View.SM`
 
-     A constant for a small width view, which may be tested againt the result of `Layout.view()`
+     A constant for a small width view, which may be tested againt the result of `UILayout.view()`
 
-- `Layout.C.View.MD`
+- `UILayout.C.View.MD`
 
-     A constant for a medium width view, which may be tested againt the result of `Layout.view()`
+     A constant for a medium width view, which may be tested againt the result of `UILayout.view()`
 
-- `Layout.C.View.LG`
+- `UILayout.C.View.LG`
 
-     A constant for a large width view, which may be tested againt the result of `Layout.view()`
+     A constant for a large width view, which may be tested againt the result of `UILayout.view()`
 
-- `Layout.C.View.XL`
+- `UILayout.C.View.XL`
 
-     A constant for an extra large width view, which may be tested againt the result of `Layout.view()`
+     A constant for an extra large width view, which may be tested againt the result of `UILayout.view()`
 
-- `Layout.C.View.XXL`
+- `UILayout.C.View.XXL`
 
-     A constant for anything wider than an extra large width view, which may be tested againt the result of `Layout.view()`
+     A constant for anything wider than an extra large width view, which may be tested againt the result of `UILayout.view()`
 
 ### Blaze helpers
 

@@ -9,6 +9,7 @@
     - The obsoleted `pwix:layout` package is renamed to `pwix:ui-layout`, bumping the major candidate version number
     - Include responsive stylesheet (moved from pwix:core-app)
     - Add (missing) templating dependency
+    - Rename globally exported object to UILayout to be consistent with the package renaming
 
 ### 1.3.2
 
@@ -27,7 +28,7 @@
     Release date: 2023- 7- 4
 
     - Rename css/ui_constants.less to stylesheets/layout.less
-    - Rename globaly exported uiLayout to Layout
+    - Rename globaly exported uiUILayout to UILayout
     - Review constants organization to not pollute global space
     - Have (more standard) XS, SM, MD, LG and XL sizes
 
@@ -35,13 +36,13 @@
 
     Release date: 2023- 6-22
 
-    - Fix Layout client setup
+    - Fix UILayout client setup
 
 ### 1.2.2
 
     Release date: 2023- 6-20
 
-    - Fix Layout initialization
+    - Fix UILayout initialization
     - Install a minimal verbosity level to trace configuration actions
 
 ### 1.2.1

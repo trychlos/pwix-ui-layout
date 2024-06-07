@@ -41,21 +41,21 @@ const _runningDict = function( name, value ){
     return _runningUI.get( name );
 };
 
-_.merge( Layout, {
+_.merge( UILayout, {
     // the result of the detectIt module
     //  https://www.npmjs.com/package/detect-it
     detectIt: detectIt,
 
     _resizeListener(){
         //console.log( 'pwix:ui-layout resizing' );
-        Layout.resize( new Date());
-        //Layout.height( window.innerHeight );
-        //Layout.width( window.innerWidth );
-        //Layout.height( window.screen.availHeight );
-        //Layout.width( window.screen.availWidth );
-        Layout.height( document.documentElement.clientHeight );
-        Layout.width( document.documentElement.clientWidth );
-        Layout.landscape( Layout.width() > Layout.height());
+        UILayout.resize( new Date());
+        //UILayout.height( window.innerHeight );
+        //UILayout.width( window.innerWidth );
+        //UILayout.height( window.screen.availHeight );
+        //UILayout.width( window.screen.availWidth );
+        UILayout.height( document.documentElement.clientHeight );
+        UILayout.width( document.documentElement.clientWidth );
+        UILayout.landscape( UILayout.width() > UILayout.height());
     },
 
     // reactive getters / setters
@@ -68,41 +68,41 @@ _.merge( Layout, {
     width( width ){ return _runningDict( 'width', width ); },
 
     // functions
-    isXS(){ return Layout.width() <= Layout.C.Breakpoints.XS },
-    isSM(){ return Layout.width() <= Layout.C.Breakpoints.SM },
-    isMD(){ return Layout.width() <= Layout.C.Breakpoints.MD },
-    isLG(){ return Layout.width() <= Layout.C.Breakpoints.LG },
-    isXL(){ return Layout.width() <= Layout.C.Breakpoints.XL },
-    isXXL(){ return Layout.width() > Layout.C.Breakpoints.XL },
+    isXS(){ return UILayout.width() <= UILayout.C.Breakpoints.XS },
+    isSM(){ return UILayout.width() <= UILayout.C.Breakpoints.SM },
+    isMD(){ return UILayout.width() <= UILayout.C.Breakpoints.MD },
+    isLG(){ return UILayout.width() <= UILayout.C.Breakpoints.LG },
+    isXL(){ return UILayout.width() <= UILayout.C.Breakpoints.XL },
+    isXXL(){ return UILayout.width() > UILayout.C.Breakpoints.XL },
 
     view(){
-        const w = Layout.width();
+        const w = UILayout.width();
         //console.log( 'w='+w );
         //console.log( window );
-        if( w > Layout.C.Breakpoints.XL ){
-            return Layout.C.View.XXL;
+        if( w > UILayout.C.Breakpoints.XL ){
+            return UILayout.C.View.XXL;
         }
-        if( w >= Layout.C.Breakpoints.LG ){
-            return Layout.C.View.XL;
+        if( w >= UILayout.C.Breakpoints.LG ){
+            return UILayout.C.View.XL;
         }
-        if( w >= Layout.C.Breakpoints.MD ){
-            return Layout.C.View.LG;
+        if( w >= UILayout.C.Breakpoints.MD ){
+            return UILayout.C.View.LG;
         }
-        if( w >= Layout.C.Breakpoints.SM ){
-            return Layout.C.View.MD;
+        if( w >= UILayout.C.Breakpoints.SM ){
+            return UILayout.C.View.MD;
         }
-        if( w >= Layout.C.Breakpoints.XS ){
-            return Layout.C.View.SM;
+        if( w >= UILayout.C.Breakpoints.XS ){
+            return UILayout.C.View.SM;
         }
-        return Layout.C.View.XS;
+        return UILayout.C.View.XS;
     }
 });
 
-Layout._resizeListener();
-Layout.cordova( Meteor.isCordova );
-Layout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
+UILayout._resizeListener();
+UILayout.cordova( Meteor.isCordova );
+UILayout.touchable( detectIt.primaryInput !== 'mouse' );  // 'touch'
 
 Tracker.autorun(() => {
-    const min = Layout.landscape() ? Layout.height() : Layout.width();
-    Layout.mobile( Layout.cordova() || min <= Layout.C.Breakpoints.SM );
+    const min = UILayout.landscape() ? UILayout.height() : UILayout.width();
+    UILayout.mobile( UILayout.cordova() || min <= UILayout.C.Breakpoints.SM );
 });

@@ -5,6 +5,6 @@
 // install the resize listener at startup
 Meteor.startup(() => {
     window.addEventListener( 'resize', () => {
-        Layout._resizeListener();
+        UILayout._resizeListener();
     });
 });

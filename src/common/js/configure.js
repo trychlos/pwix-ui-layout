@@ -4,9 +4,9 @@
 
 import _ from 'lodash';
 
-Layout._conf = {};
+UILayout._conf = {};
 
-Layout._defaults = {
+UILayout._defaults = {
     hiddenClass: 'hidden',
     visibleClass: 'visible',
     cordovaClass: '',
@@ -14,7 +14,7 @@ Layout._defaults = {
     mobileClass: '',
     landscapeClass: '',
     portraitClass: '',
-    verbosity: Layout.C.Verbose.NONE
+    verbosity: UILayout.C.Verbose.NONE
 };
 
 /**
@@ -23,16 +23,16 @@ Layout._defaults = {
  * @param {Object} o configuration options
  * @returns {Object} the package configuration
  */
-Layout.configure = function( o ){
+UILayout.configure = function( o ){
     if( o && _.isObject( o )){
-        _.merge( Layout._conf, Layout._defaults, o );
+        _.merge( UILayout._conf, UILayout._defaults, o );
         // be verbose if asked for
-        if( Layout._conf.verbosity & Layout.C.Verbose.CONFIGURE ){
-            console.log( 'pwix:ui-layout configure() with', o, 'building', Layout._conf );
+        if( UILayout._conf.verbosity & UILayout.C.Verbose.CONFIGURE ){
+            console.log( 'pwix:ui-layout configure() with', o, 'building', UILayout._conf );
         }
     }
     // also acts as a getter
-    return Layout._conf;
+    return UILayout._conf;
 };
 
-_.merge( Layout._conf, Layout._defaults );
+_.merge( UILayout._conf, UILayout._defaults );
