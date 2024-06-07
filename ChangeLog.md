@@ -7,6 +7,7 @@
     Release date: 
 
     - The obsoleted `pwix:layout` package is renamed to `pwix:ui-layout`, bumping the major candidate version number
+    - Include responsive stylesheet (moved from pwix:core-app)
 
 ### 1.3.2
 
