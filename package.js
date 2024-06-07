@@ -29,6 +29,7 @@ function configure( api ){
     api.use( 'tracker', 'client' );
     api.use( 'reactive-dict', 'client' );
     api.use( 'reactive-var', 'client' );
+    api.use( 'templating@1.0.6 || 1.4.4-rc300.2', 'client' );
     api.use( 'tmeasday:check-npm-versions@1.0.2 || 2.0.0-beta.0', 'server' );
     api.addFiles( 'src/client/stylesheets/layout.less', 'client', { isImport: true });
 }
