@@ -315,7 +315,7 @@ Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](ht
 
 Instead we check npm versions of installed packages at runtime, on server startup, in development environment.
 
-Dependencies as of v 1.3.0:
+Dependencies as of v 2.0.0:
 ```
     'detect-it': '^4.0.1',
     'lodash': '^4.17.0'

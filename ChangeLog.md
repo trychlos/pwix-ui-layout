@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 2.0.0-rc
+### 2.0.0
 
-    Release date: 
+    Release date: 2024- 6- 7
 
     - The obsoleted `pwix:layout` package is renamed to `pwix:ui-layout`, bumping the major candidate version number
     - Include responsive stylesheet (moved from pwix:core-app)
