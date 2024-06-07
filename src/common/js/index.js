@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/common/js/index.js
+ * pwix:ui-layout/src/common/js/index.js
  */
 
 import './global.js';

@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/client/js/blaze.js
+ * pwix:ui-layout/src/client/js/blaze.js
  *
  *  Register global helpers.
  */

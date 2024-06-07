@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/common/js/constants.js
+ * pwix:ui-layout/src/common/js/constants.js
  */
 
 Layout.C = {

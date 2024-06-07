@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/common/js/configure.js
+ * pwix:ui-layout/src/common/js/configure.js
  */
 
 import _ from 'lodash';
@@ -28,7 +28,7 @@ Layout.configure = function( o ){
         _.merge( Layout._conf, Layout._defaults, o );
         // be verbose if asked for
         if( Layout._conf.verbosity & Layout.C.Verbose.CONFIGURE ){
-            console.log( 'pwix:layout configure() with', o, 'building', Layout._conf );
+            console.log( 'pwix:ui-layout configure() with', o, 'building', Layout._conf );
         }
     }
     // also acts as a getter

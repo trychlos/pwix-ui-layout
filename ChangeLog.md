@@ -1,4 +1,4 @@
-# pwix:layout
+# pwix:ui-layout
 
 ## ChangeLog
 
@@ -12,7 +12,7 @@
 
     Release date: 2024- 6- 7
 
-    - Obsolete pwix:layout
+    - Obsolete pwix-ui-layout
 
 ### 1.3.1
 

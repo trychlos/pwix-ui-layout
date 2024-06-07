@@ -1,4 +1,4 @@
-# pwix:layout
+# pwix:ui-layout
 
 __THIS PACKAGE IS OBSOLETED AS OF 2024-06-07, IS SUPERSEDED BY `pwix:ui-layout` STARTING WITH THIS VERY SAME DATE.__
 
@@ -57,7 +57,7 @@ This eventually leads to following importable constants:
 These constants are thought to be used in media queries, and can be imported in an application `less` file as:
 
 ```
-    @import "{pwix:layout}/src/client/stylesheets/layout.less";
+    @import "{pwix:ui-layout}/src/client/stylesheets/layout.less";
 ```
 
 ## Configuration

@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/client/js/functions.js
+ * pwix:ui-layout/src/client/js/functions.js
  */
 
 import { ReactiveDict } from 'meteor/reactive-dict';
@@ -47,7 +47,7 @@ _.merge( Layout, {
     detectIt: detectIt,
 
     _resizeListener(){
-        //console.log( 'pwix:layout resizing' );
+        //console.log( 'pwix:ui-layout resizing' );
         Layout.resize( new Date());
         //Layout.height( window.innerHeight );
         //Layout.width( window.innerWidth );

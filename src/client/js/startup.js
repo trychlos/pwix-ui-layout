@@ -1,5 +1,5 @@
 /*
- * pwix:layout/src/cient/js/startup.js
+ * pwix:ui-layout/src/cient/js/startup.js
  */
 
 // install the resize listener at startup

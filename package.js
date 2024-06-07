@@ -1,8 +1,8 @@
 Package.describe({
-    name: 'pwix:layout',
+    name: 'pwix:ui-layout',
     version: '1.3.3-rc',
     summary: 'Client-only Meteor package for responsive layout management',
-    git: 'https://github.com/trychlos/pwix:layout',
+    git: 'https://github.com/trychlos/pwix:ui-layout',
     documentation: 'README.md'
 });
 
@@ -18,7 +18,7 @@ Package.onUse( function( api ){
 Package.onTest( function( api ){
     configure( api );
     api.use( 'tinytest' );
-    api.use( 'pwix:layout' );
+    api.use( 'pwix:ui-layout' );
     api.mainModule( 'test/js/index.js' );
 });
 
