@@ -1,0 +1,99 @@
+/*
+ * pwix:ui-layout/src/client/stylesheets/_responsive.less
+ *
+ * Responsive constants
+ */
+
+:root {
+    // a responsive value, which grows from 1 on XS to 5 on XXL devices
+    --ui-resp-5-1-5: 1;
+    @media screen and ( min-width: @ui-sm-width ){
+        --ui-resp-5-1-5: 1.125;
+    }
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-5-1-5: 2.08;
+    }
+    @media screen and ( min-width: @ui-lg-width ){
+        --ui-resp-5-1-5: 2.667;
+    }
+    @media screen and ( min-width: @ui-xl-width ){
+        --ui-resp-5-1-5: 5;
+    }
+
+    // a responsive value, which shrinks from 5 on XS to 1 on XXL devices
+    --ui-resp-5-5-1: 5;
+    @media screen and ( min-width: @ui-sm-width ){
+        --ui-resp-5-5-1: 2.667;
+    }
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-5-5-1: 2.08;
+    }
+    @media screen and ( min-width: @ui-lg-width ){
+        --ui-resp-5-5-1: 1.125;
+    }
+    @media screen and ( min-width: @ui-xl-width ){
+        --ui-resp-5-5-1: 1;
+    }
+
+    // a responsive value, which grows from 1 on XS to 2 on XXL devices
+    //  same principle than previous, but only three steps
+    --ui-resp-3-1-2: 1;
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-3-1-2: 1.5;
+    }
+    @media screen and ( min-width: @ui-lg-width ){
+        --ui-resp-3-1-2: 2;
+    }
+
+    // a responsive value, which shrinks from 2 on XS to 1 on XXL devices
+    //  same principle than previous, but only three steps
+    --ui-resp-3-2-1: 2;
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-3-2-1: 1.5;
+    }
+    @media screen and ( min-width: @ui-lg-width ){
+        --ui-resp-3-2-1: 1;
+    }
+
+    // a responsive value, which grows from 1 on XS to 2 on XXL devices
+    //  same principle than previous, but only two steps
+    --ui-resp-md-1-2: 1;
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-md-1-2: 2;
+    }
+
+    // a responsive value, which shrinks from 2 on XS to 1 on XXL devices
+    //  same principle than previous, but only two steps
+    --ui-resp-md-2-1: 2;
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-md-2-1: 1;
+    }
+
+    // a responsive value, which grows from 1 on XS to 1.5 on XXL devices
+    //  same principle than previous, but only two steps
+    --ui-resp-md-1-15: 1;
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-md-1-15: 1.5;
+    }
+
+    // a responsive value, which shrinks from 1.5 on XS to 1 on XXL devices
+    //  same principle than previous, but only two steps
+    --ui-resp-md-15-1: 1.5;
+    @media screen and ( min-width: @ui-md-width ){
+        --ui-resp-md-15-1: 1;
+    }
+
+    // a responsive value, which grows from 1 on XS to 1.5 on XXL devices
+    //  same than previous, with breakpoint on LG
+    --ui-resp-lg-1-15: 1;
+    @media screen and ( min-width: @ui-lg-width ){
+        --ui-resp-lg-1-15: 1.5;
+    }
+
+    // a responsive value, which shrinks from 1.5 on XS to 1 on XXL devices
+    //  same than previous, with breakpoint on LG
+    --ui-resp-lg-15-1: 1.5;
+    @media screen and ( min-width: @ui-lg-width ){
+        --ui-resp-lg-15-1: 1;
+    }
+}
