@@ -2,17 +2,17 @@
 
 ## ChangeLog
 
-### 1.3.3-rc
+### 2.0.0-rc
 
     Release date: 
 
-    - 
+    - The obsoleted `pwix:layout` package is renamed to `pwix:ui-layout`, bumping the major candidate version number
 
 ### 1.3.2
 
     Release date: 2024- 6- 7
 
-    - Obsolete pwix-ui-layout
+    - Obsolete pwix-layout
 
 ### 1.3.1
 
