@@ -10,6 +10,7 @@
     - Include responsive stylesheet (moved from pwix:core-app)
     - Add (missing) templating dependency
     - Rename globally exported object to UILayout to be consistent with the package renaming
+    - Distinguish between to-be-explicitly-imported constants and stylesheets automatically included
 
 ### 1.3.2
 
