@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 1.3.2-rc
+### 1.3.2
 
-    Release date: 
+    Release date: 2024- 6- 7
 
     - Obsolete pwix:layout
 
@@ -80,4 +80,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, May. 24th
+- Last updated on 2024, Jun. 7th
