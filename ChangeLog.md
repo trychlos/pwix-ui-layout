@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Obsolete pwix:layout
 
 ### 1.3.1
 

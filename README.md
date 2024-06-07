@@ -1,5 +1,7 @@
 # pwix:layout
 
+__THIS PACKAGE IS OBSOLETED AS OF 2024-06-07, IS SUPERSEDED BY `pwix:ui-layout` STARTING WITH THIS VERY SAME DATE.__
+
 ## Rationale
 
 A Meteor helper package to detect at runtime the nature of the user interface to be displayed:
