@@ -1,4 +1,4 @@
-# pwix-layout - TODO
+# pwix:ui-layout - TODO
 
 ## Summary
 
