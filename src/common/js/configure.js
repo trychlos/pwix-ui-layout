@@ -14,7 +14,7 @@ UILayout._defaults = {
     mobileClass: '',
     landscapeClass: '',
     portraitClass: '',
-    verbosity: UILayout.C.Verbose.NONE
+    verbosity: UILayout.C.Verbose.CONFIGURE
 };
 
 /**
@@ -28,7 +28,8 @@ UILayout.configure = function( o ){
         _.merge( UILayout._conf, UILayout._defaults, o );
         // be verbose if asked for
         if( UILayout._conf.verbosity & UILayout.C.Verbose.CONFIGURE ){
-            console.log( 'pwix:ui-layout configure() with', o, 'building', UILayout._conf );
+            //console.log( 'pwix:ui-layout configure() with', o, 'building', UILayout._conf );
+            console.log( 'pwix:ui-layout configure() with', o );
         }
     }
     // also acts as a getter

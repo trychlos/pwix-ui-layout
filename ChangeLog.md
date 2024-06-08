@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Now defaults to (not too) verbosely configure
 
 ### 2.0.0
 
