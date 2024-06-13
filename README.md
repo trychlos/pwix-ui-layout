@@ -1,6 +1,6 @@
 # pwix:ui-layout
 
-## Rationale
+## What is it ?
 
 A Meteor helper package to detect at runtime the nature of the user interface to be displayed:
 
@@ -8,6 +8,8 @@ A Meteor helper package to detect at runtime the nature of the user interface to
 - either for a large screen (desktop) or a small one (mobile)
 - with or without a keyboard/mouse
 - with or without a touchable device.
+
+## Rationale
 
 In a mobile (Cordova) application, routes are not displayed as they are in a web browser, but even if routes
 are not directly available to the user, they are still handled under the hood.
@@ -58,146 +60,82 @@ These constants are thought to be used in media queries, and can be imported in 
     @import "{pwix:ui-layout}/src/client/constants/breakpoints.less";
 ```
 
-## Configuration
-
-The package's behavior can be configured through a call to the `UILayout.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
-
-Known configuration options are:
-
-- `hiddenClass`
-
-    The class to be returned by the package helpers to hide a DOM element.
-
-     Defaut value is `hidden`.
-
-- `visibleClass`
-
-     The class to be returned by the package helpers to show a DOM element.
-
-     Defaut value is `visible`.
-
-- `cordovaClass`
-
-     The class to be returned by the package helpers when running in a Cordova environment.
-
-     Defaut value is empty.
-
-- `touchableClass`
-
-     The class to be returned by the package helpers when running on a device whose primary input is a touchpad.
-
-     Defaut value is empty.
-
-- `mobileClass`
-
-     The class to be returned by the package helpers when the environment seems to be a mobile.
-
-     Defaut value is empty.
-
-- `landscapeClass`
-
-     The class to be returned by the package helpers when running in landscape mode.
-
-     Defaut value is empty.
-
-- `portraitClass`
-
-     The class to be returned by the package helpers when running in portrait mode.
-
-     Defaut value is empty.
-
-- `verbosity`
-
-     The verbosity level.
-
-     May be `UILayout.C.Verbose.NONE`, or a or-ed value of following:
-
-     - `UILayout.C.Verbose.CONFIGURE`
-
-          Trace the configuration actions.
-
-     Defaut value is `UILayout.C.Verbose.NONE`.
-
-Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `UILayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
-
 ## Provides
 
-### A global object
+### `UILayout`
 
-- `UILayout`
+The exported `BlazeLayout` global object provides following items:
 
-### The detectIt result
-
-- `UILayout.detectIt{ ... }`
+#### `UILayout.detectIt{ ... }`
 
 The result of the detectIt analyse (see https://www.npmjs.com/package/detect-it).
 
-### Methods
+#### Functions
 
-- `UILayout.cordova()`
+##### `UILayout.cordova()`
 
-     Whether we are running a mobile (Cordova) application.
+Whether we are running a mobile (Cordova) application.
 
-- `UILayout.height()`
+##### `UILayout.height()`
 
-     The current document's viewport height.
+The current document's viewport height.
 
-     A reactive data source.
+A reactive data source.
 
-- `UILayout.isXS()`
-- `UILayout.isSM()`
-- `UILayout.isMD()`
-- `UILayout.isLG()`
-- `UILayout.isXL()`
+##### `UILayout.isXS()`
+##### `UILayout.isSM()`
+##### `UILayout.isMD()`
+##### `UILayout.isLG()`
+##### `UILayout.isXL()`
 
-     Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
+Returns `true` if the width of the display is less than or equal to the corresponding breakpoint.
 
-     A reactive data source.
+Reactive data sources.
 
-- `UILayout.isXXL()`
+##### `UILayout.isXXL()`
 
-     Returns `true` if the display is wider than extra large, _i.e._ greater than the `@ui-xl-width` breakpoint.
+Returns `true` if the display is wider than extra large, _i.e._ greater than the `@ui-xl-width` breakpoint.
 
-     A reactive data source.
+A reactive data source.
 
-- `UILayout.landscape()`
+##### `UILayout.landscape()`
 
-     Whether we are using a landscape layout.
+Whether we are using a landscape layout.
 
-     A reactive data source.
+A reactive data source.
 
-- `UILayout.mobile()`
+##### `UILayout.mobile()`
 
-     Whether we are running on a mobile device.
+Whether we are running on a mobile device.
 
-     Please note that, contrarily to other datas, whether we are running, or not, on a mobile device, say a phone,
-     is only a hint, as we do not have any objective way to detect this type of environment.
+Please note that, contrarily to other datas, whether we are running, or not, on a mobile device, say a phone,
+is only a hint, as we do not have any objective way to detect this type of environment.
 
-     For now, we are tracking a touchable device with a small resolution, or a Cordova environment.
+For now, we are tracking a touchable device with a small resolution, or a Cordova environment.
 
-- `UILayout.resize()`
+##### `UILayout.resize()`
 
-     The last resize event timestamp.
+The last resize event timestamp.
 
-     A reactive data source.
+A reactive data source.
 
-- `UILayout.touchable()`
+##### `UILayout.touchable()`
 
-     Whether a touchable device is the primary input way (i.e. no keyboard nor mouse).
+Whether a touchable device is the primary input way (i.e. no keyboard nor mouse).
 
-- `UILayout.view()`
+##### `UILayout.view()`
 
-     Returns a `UILayout.C.View.XS/SM/MD/LG/XL/XXL` constant which corresponds to the current size of the viewport.
+Returns a `UILayout.C.View.XS/SM/MD/LG/XL/XXL` constant which corresponds to the current size of the viewport.
 
-     A reactive data source.
+A reactive data source.
 
-- `UILayout.width()`
+##### `UILayout.width()`
 
-     The browser viewport width.
+The browser viewport width.
 
-     A reactive data source.
+A reactive data source.
 
-### Constants
+#### Constants
 
 - `UILayout.C.Breakpoints.XS`
 
@@ -309,22 +247,98 @@ This package has been tested on following devices:
      XS in portrait mode
      MD in landscape mode
 
+## Configuration
+
+The package's behavior can be configured through a call to the `UILayout.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.
+
+Known configuration options are:
+
+- `hiddenClass`
+
+    The class to be returned by the package helpers to hide a DOM element.
+
+     Defaut value is `hidden`.
+
+- `visibleClass`
+
+     The class to be returned by the package helpers to show a DOM element.
+
+     Defaut value is `visible`.
+
+- `cordovaClass`
+
+     The class to be returned by the package helpers when running in a Cordova environment.
+
+     Defaut value is empty.
+
+- `touchableClass`
+
+     The class to be returned by the package helpers when running on a device whose primary input is a touchpad.
+
+     Defaut value is empty.
+
+- `mobileClass`
+
+     The class to be returned by the package helpers when the environment seems to be a mobile.
+
+     Defaut value is empty.
+
+- `landscapeClass`
+
+     The class to be returned by the package helpers when running in landscape mode.
+
+     Defaut value is empty.
+
+- `portraitClass`
+
+     The class to be returned by the package helpers when running in portrait mode.
+
+     Defaut value is empty.
+
+- `verbosity`
+
+     The verbosity level.
+
+     May be `UILayout.C.Verbose.NONE`, or a or-ed value of following:
+
+     - `UILayout.C.Verbose.CONFIGURE`
+
+          Trace the configuration actions.
+
+     Defaut value is `UILayout.C.Verbose.NONE`.
+
+Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `UILayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
+
 ## NPM peer dependencies
 
-Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](https://guide.meteor.com/writing-atmosphere-packages.html#peer-npm-dependencies), we no more hardcode NPM dependencies in the `Npm.depends` clause of the `package.js`. 
+Starting with v 1.1.0, and in accordance with advices from [the Meteor Guide](https://guide.meteor.com/writing-atmosphere-packages.html#peer-npm-dependencies), we no more hardcode NPM dependencies in the `Npm.depends` clause of the `package.js`.
 
 Instead we check npm versions of installed packages at runtime, on server startup, in development environment.
 
 Dependencies as of v 2.0.0:
-```
+
+```js
     'detect-it': '^4.0.1',
     'lodash': '^4.17.0'
 ```
 
 Each of these dependencies should be installed at application level:
-```
+
+```sh
     meteor npm install <package> --save
 ```
+
+## Translations
+
+None at the moment.
+
+## Cookies and comparable technologies
+
+None at the moment.
+
+## Issues & help
+
+In case of support or error, please report your issue request to our [Issues tracker](https://github.com/trychlos/pwix-ui-layout/issues).
 
 ---
 P. Wieser

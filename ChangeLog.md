@@ -4,9 +4,10 @@
 
 ### 2.0.1-rc
 
-    Release date: 
+    Release date:
 
     - Now defaults to (not too) verbosely configure
+    - Update README
 
 ### 2.0.0
 
