@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 2.0.1-rc
+### 2.0.1
 
-    Release date:
+    Release date: 2024- 6-13
 
     - Now defaults to (not too) verbosely configure
     - Update README
@@ -97,4 +97,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 7th
+- Last updated on 2024, Jun. 13th
