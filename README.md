@@ -258,6 +258,12 @@ The package provides a stylesheet to be imported in your application's `main.les
 - `@ui-lg-width`
 - `@ui-xl-width`
 
+#### CSS properties
+
+- `--pwix-ui-layout-resp-grows`: a property whose value ranges from 1 on smallest devices to 6 on largest ones.
+
+- `--pwix-ui-layout-resp-shrinks`: a property whose value ranges from 6 on smallest devices to 1 on largest ones.
+
 ## Test environments
 
 This package has been tested on following devices:
