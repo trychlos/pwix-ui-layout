@@ -31,7 +31,8 @@ function configure( api ){
     api.use( 'reactive-var', 'client' );
     api.use( 'templating@1.0.6 || 1.4.4-rc300.2', 'client' );
     api.use( 'tmeasday:check-npm-versions@1.0.2 || 2.0.0-beta.0', 'server' );
-    api.addFiles( 'src/client/constants/breakpoints.less', 'client', { isImport: true });
+    api.addFiles( 'src/client/constants/breakpoints.less', 'client', { isImport: true });   // obsoleted as of v2.1
+    api.addFiles( 'src/client/stylesheets/index.less', 'client', { isImport: true });
 }
 
 // NPM dependencies are checked in /src/server/js/check_npms.js

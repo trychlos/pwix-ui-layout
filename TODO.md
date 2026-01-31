@@ -10,7 +10,8 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|    4 |  |  |
+|    4 | 2026- 1-30 | v2.1.0: 'src/client/constants/breakpoints.less' is obsoleted and replaced with 'src/client/stylesheets/index.less', has to be removed in a later version |
+|    5 |  |  |
 
 ---
 ## Done

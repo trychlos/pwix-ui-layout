@@ -7,6 +7,7 @@
     Release date: 
 
     - Log view model to the console, defining corresponding UILayout.C.Verbose.VIEW_MODEL verbosity constant
+    - Define new exported '/src/client/stylesheets/index.less' to be imported in applications
 
 ### 2.0.1
 

@@ -1,5 +1,10 @@
 /*
  * pwix:ui-layout/src/client/constants/breakpoints.less
+ *
+ * Note that this file is OBSOLETED starting with v2.1, and should not be exported or even used any more.
+ * It is replaced with /src/client/stylesheets/_breakpoints.less, which is itself exported via /src/client/stylesheets/index.less
+ *
+ * As of 2026- 1-30, it is left with v2.0 breakpoint values.
  */
 
 /*
@@ -12,3 +17,10 @@
 @ui-md-width:  800px;
 @ui-lg-width: 1024px;
 @ui-xl-width: 1920px;
+
+/*
+ * Marker: if this file is bundled, this CSS property exists at runtime
+ */
+:root {
+    --pwix-ui-layout__deprecated_constants_breakpoints_less: 1;
+}

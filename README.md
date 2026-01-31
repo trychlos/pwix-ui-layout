@@ -54,12 +54,6 @@ This eventually leads to following importable constants:
 - `@ui-lg-width` is 1024px
 - `@ui-xl-width` is 1920px
 
-These constants are thought to be used in media queries, and can be imported in an application `less` file as:
-
-```less
-    @import "{pwix:ui-layout}/src/client/constants/breakpoints.less";
-```
-
 ### Early 2026 note
 
 At early 2026, I have reviewed the 2.0 breakpoints, against Bootstrap choices, and have asked too propositions to ChatGPT and Claude given them the same rules as defined above. Below the results:
@@ -80,7 +74,7 @@ Please note that, whatever be the chosen breakpoints, what is important is how y
 
 ### `UILayout`
 
-The exported `BlazeLayout` global object provides following items:
+The exported `UILayout` global object provides following items:
 
 #### `UILayout.detectIt{ ... }`
 
@@ -247,6 +241,22 @@ The package defines some globally available Blaze helpers:
      - `uiXXLView`
 
           Returns `true` if the width of the display is more than extra large, _i.e._ greater than the `@ui-xl-breakpoint` breakpoint.
+
+### LESS Stylesheets
+
+The package provides a stylesheet to be imported in your application's `main.less` as:
+
+```less
+    @import "{pwix:ui-layout}/src/client/stylesheets/index.less";
+```
+
+#### LESS variables
+
+- `@ui-xs-width`
+- `@ui-sm-width`
+- `@ui-md-width`
+- `@ui-lg-width`
+- `@ui-xl-width`
 
 ## Test environments
 
