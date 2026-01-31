@@ -3,12 +3,12 @@
  */
 
 UILayout.C = {
-    // the size of the breakpoints as defined in /src/client/stylesheets/layout.less
+    // the size of the breakpoints as defined in /src/client/stylesheets/_breakpoints.less
     Breakpoints: {
         XS:  384,
-        SM:  432,
-        MD:  800,
-        LG: 1024,
+        SM:  592,
+        MD:  880,
+        LG: 1200,
         XL: 1920
     },
 

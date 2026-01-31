@@ -40,18 +40,18 @@ The package defines some breakpoints, along with corresponding `less` constants.
 - starting from that, breakpoints are chosen to roughly cover equivalent parts of the population, and as multiples of 16px which is the standard default size for `1em`:
 
      - a `xs` extra small display, until 384px, which covers about 29%
-     - a `sm` small display, until 432px, which covers additional 32%
-     - a `md` medium display, until 800px, which covers still 16%
-     - a `lg` large display, until 1024px, which covers (only) 10%
+     - a `sm` small display, until 592px, which covers additional 32%
+     - a `md` medium display, until 880px, which covers still 16%
+     - a `lg` large display, until 1200, which covers (only) 10%
      - a `xl` extra large display, until 1920px, which covers remaining 14%
-     - categorizing larger display as extra large `xl`.
+     - categorizing larger display as extra large `xxl`.
 
 This eventually leads to following importable constants:
 
 - `@ui-xs-width` is 384px
-- `@ui-sm-width` is 432px
-- `@ui-md-width` is 800px
-- `@ui-lg-width` is 1024px
+- `@ui-sm-width` is 592px (was 432px up to v2.0)
+- `@ui-md-width` is 880px (was 800px up to v2.0)
+- `@ui-lg-width` is 1200px (was 1024px up to v2.0)
 - `@ui-xl-width` is 1920px
 
 ### Early 2026 note
@@ -59,13 +59,13 @@ This eventually leads to following importable constants:
 At early 2026, I have reviewed the 2.0 breakpoints, against Bootstrap choices, and have asked too propositions to ChatGPT and Claude given them the same rules as defined above. Below the results:
 
 ```
-               ui-layout v2.0  Bootstrap v5  ChatGPT  Claude
-               --------------  ------------  -------  ------
-     xs <=          384            576         384      360
-     sm <=          432            768         432      432
-     md <=          800            992         816      768
-     lg <=         1024           1200        1440     1024
-     xl <=         1920           1400        1920     1920
+               ui-layout v2.0  Bootstrap v5  ChatGPT  Claude  ui-layout v2.1
+               --------------  ------------  -------  ------  --------------
+     xs <=          384            576         384      360        384
+     sm <=          432            768         432      432        592
+     md <=          800            992         816      768        880
+     lg <=         1024           1200        1440     1024       1200
+     xl <=         1920           1400        1920     1920       1920
 ```
 
 Please note that, whatever be the chosen breakpoints, what is important is how you use them in your application, which itself depends of the population and the devices of your users.
