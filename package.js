@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:ui-layout',
-    version: '2.0.2-rc',
+    version: '2.1.0-rc',
     summary: 'Meteor package for responsive layout management',
     git: 'https://github.com/trychlos/pwix:ui-layout',
     documentation: 'README.md'

@@ -106,3 +106,10 @@ Tracker.autorun(() => {
     const min = UILayout.landscape() ? UILayout.height() : UILayout.width();
     UILayout.mobile( UILayout.cordova() || min <= UILayout.C.Breakpoints.SM );
 });
+
+Tracker.autorun(() => {
+    const view = UILayout.view();
+    if( UILayout.configure().verbosity & UILayout.C.Verbose.VIEW_MODEL ){
+        console.log( 'pwix:ui-layout', 'view()', view );
+    }
+});

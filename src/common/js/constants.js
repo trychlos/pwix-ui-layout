@@ -15,7 +15,8 @@ UILayout.C = {
     // verbosity levels
     Verbose: {
         NONE: 0,
-        CONFIGURE: 0x01 << 0
+        CONFIGURE:      0x01 << 0,
+        VIEW_MODEL:     0x01 << 1
     },
 
     // the view model

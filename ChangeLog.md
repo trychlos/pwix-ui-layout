@@ -2,11 +2,11 @@
 
 ## ChangeLog
 
-### 2.0.2-rc
+### 2.1.0-rc
 
     Release date: 
 
-    - 
+    - Log view model to the console, defining corresponding UILayout.C.Verbose.VIEW_MODEL verbosity constant
 
 ### 2.0.1
 
@@ -43,7 +43,7 @@
 
     - Rename css/ui_constants.less to stylesheets/layout.less
     - Rename globaly exported uiUILayout to UILayout
-    - Review constants organization to not pollute global space
+    - Review constants tenant to not pollute global space
     - Have (more standard) XS, SM, MD, LG and XL sizes
 
 ### 1.2.3

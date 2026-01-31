@@ -34,7 +34,7 @@ all possible cases of running devices.
 
 ## Breakpoints
 
-The package defines some breakpoints, along with corresponding `less` constants. These breakpoints have been carefully chosen to best suit the majority of the display resolution seen on the web, as provided by [statcounter Global stats](https://gs.statcounter.com/screen-resolution-stats). The rationale has been:
+The package defines some breakpoints, along with corresponding `less` constants. These breakpoints have been carefully chosen to best suit the majority of the display resolution seen on the web, as provided by [statcounter Global stats](https://gs.statcounter.com/screen-resolution-stats) as of January 2023. The rationale has been:
 
 - first, consider only known display resolutions so that percents sum to 100%, thus ignoring the `other` category
 - starting from that, breakpoints are chosen to roughly cover equivalent parts of the population, and as multiples of 16px which is the standard default size for `1em`:
@@ -56,9 +56,25 @@ This eventually leads to following importable constants:
 
 These constants are thought to be used in media queries, and can be imported in an application `less` file as:
 
-```
+```less
     @import "{pwix:ui-layout}/src/client/constants/breakpoints.less";
 ```
+
+### Early 2026 note
+
+At early 2026, I have reviewed the 2.0 breakpoints, against Bootstrap choices, and have asked too propositions to ChatGPT and Claude given them the same rules as defined above. Below the results:
+
+```
+               ui-layout v2.0  Bootstrap v5  ChatGPT  Claude
+               --------------  ------------  -------  ------
+     xs <=          384            576         384      360
+     sm <=          432            768         432      432
+     md <=          800            992         816      768
+     lg <=         1024           1200        1440     1024
+     xl <=         1920           1400        1920     1920
+```
+
+Please note that, whatever be the chosen breakpoints, what is important is how you use them in your application, which itself depends of the population and the devices of your users.
 
 ## Provides
 
@@ -305,7 +321,11 @@ Known configuration options are:
 
           Trace the configuration actions.
 
-     Defaut value is `UILayout.C.Verbose.NONE`.
+     - `UILayout.C.Verbose.VIEW_MODEL`
+
+          Log the current view model on the (client) console.
+
+     Defaut value is `UILayout.C.Verbose.CONFIGURE`.
 
 Please note, as an explicit reminder, that, because the Meteor packages are instanciated at application level, they can be configured once at most, and only once at most. Each addtionnal call to `UILayout.configure()` will just override the previous one. You have been warned: **only the application should configure a package**.
 
